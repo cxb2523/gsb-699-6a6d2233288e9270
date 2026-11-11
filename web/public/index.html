@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenTrustBench — A trust score for every AI agent</title>
+        <meta name="description" content="OpenTrustBench is a free, local-first security scanner for AI agents and MCP servers. 8 OWASP-mapped rules, Trust Cards graded A–F (or U where coverage is insufficient), SARIF output, and a public registry of 53 scanned servers.">
+  <link rel="canonical" href="https://opentrustbench.com/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="OpenTrustBench">
+  <meta property="og:url" content="https://opentrustbench.com/">
+  <meta property="og:title" content="OpenTrustBench — A trust score for every AI agent">
+  <meta property="og:description" content="Free, local-first scanner: 8 OWASP-mapped rules, Trust Cards graded A–F or U, and a public registry of 53 scanned MCP servers (50 external targets + 3 self-scans).">
+  <meta property="og:image" content="https://opentrustbench.com/og-image.png">
+  <meta property="og:image:width" content="1280">
+  <meta property="og:image:height" content="640">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://opentrustbench.com/og-image.png">
+  <meta name="twitter:title" content="OpenTrustBench — A trust score for every AI agent">
+  <meta name="twitter:description" content="Free, local-first scanner: 8 OWASP-mapped rules, Trust Cards graded A–F or U, and a public registry of 53 scanned MCP servers (50 external targets + 3 self-scans).">
+  <link rel="preload" href="assets/fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/jetbrains-mono-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css">
+  <link rel="alternate" type="application/rss+xml" title="OpenTrustBench changelog" href="feed.xml">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://opentrustbench.com/#org",
+        "name": "OpenTrustBench",
+        "url": "https://opentrustbench.com/",
+        "description": "Free, local-first trust and security scanner for AI agents and MCP servers.",
+        "sameAs": ["https://github.com/eulogik/OpenTrustBench"]
+      },
+      {
+        "@type": "WebSite",
+        "url": "https://opentrustbench.com/",
+        "name": "OpenTrustBench",
+        "publisher": { "@id": "https://opentrustbench.com/#org" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "OpenTrustBench CLI",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Cross-platform",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "downloadUrl": "https://www.npmjs.com/package/@opentrustbench/cli"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "What is OpenTrustBench?", "acceptedAnswer": { "@type": "Answer", "text": "OpenTrustBench is a free, local-first security scanner for AI agents and MCP servers. It runs 8 OWASP-mapped static rules, extracts permission manifests, and issues a Trust Card graded A–F with SARIF output for CI." } },
+          { "@type": "Question", "name": "How do I scan an MCP server?", "acceptedAnswer": { "@type": "Answer", "text": "Run npx @opentrustbench/cli scan <path-or-github-url>. You get a Trust Card, SARIF and Markdown reports in seconds. Local analysis; no OpenTrustBench telemetry. GitHub-URL scans clone the public repo to a temp directory on your machine." } },
+          { "@type": "Question", "name": "What is a Trust Card?", "acceptedAnswer": { "@type": "Answer", "text": "A Trust Card is a portable, machine-readable credential (opentrustbench/trust-card/v2) summarizing an agent's security posture: letter grade, 0–100 score, findings, permissions, provenance, coverage, and inferred host compatibility." } },
+          { "@type": "Question", "name": "Is OpenTrustBench a certification?", "acceptedAnswer": { "@type": "Answer", "text": "No. OpenTrustBench is a static scanner, not a certification body. Attack analysis is heuristic, workflow eval is simulated, and Trust Cards are evidence input for your own review — never a compliance verdict." } },
+          { "@type": "Question", "name": "Does my code leave my machine?", "acceptedAnswer": { "@type": "Answer", "text": "No. The CLI runs entirely locally with zero telemetry and no OpenTrustBench data retention. GitHub-URL scans clone the public repo to a temp directory on your machine. Dependency auditing queries the npm registry." } },
+          { "@type": "Question", "name": "What do the grades mean?", "acceptedAnswer": { "@type": "Answer", "text": "A (90+) through F (below 40), computed from security findings, permission scope, provenance signals, reliability and stability. U means ungraded: static coverage was insufficient, so no score was issued and the card is excluded from averages and rankings. In the 2026-09-18 snapshot, 3 of 53 cards are graded and 50 are U." } },
+          { "@type": "Question", "name": "Why shouldn't I scan the OpenTrustBench monorepo itself?", "acceptedAnswer": { "@type": "Answer", "text": "Because it contains its own test ammunition: a deliberately vulnerable example fixture, unit tests that must contain eval( and exec( strings to prove the detector catches them, and automation scripts that legitimately shell out to git and npm. The monorepo itself currently grades U (60 code files analyzed against 66 unsupported implementation files, so coverage is limited). The shipped CLI (packages/cli) self-scans at A (90/100) — grade the artifact you ship, not the monorepo that tests it." } }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <nav class="nav" aria-label="Main">
+    <div class="nav-inner">
+      <a class="brand" href="./" aria-label="OpenTrustBench home"><span class="brand-mark">O</span>OpenTrustBench</a>
+      <div class="nav-links" id="nav-links">
+        <a href="#how">How it works</a>
+        <a href="r/">Registry</a>
+        <a href="methodology.html">Methodology</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="nav-cta">
+        <a class="btn btn-ghost btn-sm" href="https://github.com/eulogik/OpenTrustBench">GitHub</a>
+        <button class="theme-toggle" type="button" aria-label="Toggle theme"><svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+        <button class="burger" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <!-- Hero: one outcome, one action, immediate proof -->
+    <section class="hero" aria-labelledby="hero-h">
+      <div class="wrap">
+        <p class="eyebrow">OWASP-mapped · Agentic + LLM Top 10</p>
+        <h1 id="hero-h">A trust score for every AI agent.</h1>
+        <p class="lede"><strong style="color:var(--text)">OpenTrustBench is a free, local-first security scanner for AI agents and MCP servers.</strong> Eight static rules, a permission manifest, and a Trust Card graded A–F — in seconds. Local analysis; no OpenTrustBench telemetry.</p>
+        <div class="hero-ctas">
+          <span class="cmd"><span>npx @opentrustbench/cli scan .</span><button type="button" data-copy="npx @opentrustbench/cli scan .">Copy</button></span>
+          <a class="btn btn-ghost" href="https://github.com/eulogik/OpenTrustBench">View on GitHub</a>
+        </div>
+        <p class="hero-note">Free forever · No account · Open source (Apache-2.0) · <a href="#install">Install in 60 seconds</a></p>
+
+        <div class="proof reveal" aria-label="Registry statistics">
+          <div><div class="n">53</div><div class="l">Trust Cards published — 50 external targets + 3 self-scans · <a href="r/">browse the registry</a></div></div>
+          <div><div class="n">3</div><div class="l">graded A–F; 50 withheld as U where coverage was insufficient</div></div>
+          <div><div class="n">8</div><div class="l">OWASP-mapped static rules behind every card</div></div>
+          <div><div class="n">0</div><div class="l">bytes of your code sent to OpenTrustBench</div></div>
+        </div>
+
+        <div class="term reveal" id="term" data-lines="$ npx @opentrustbench/cli scan examples/secure-agent-skill&#10;Capability: agent-skill (95%) · Findings: 0 · Rules: 8 static (OWASP-mapped)&#10;Trust Grade: [G]U (ungraded)[/G] · Coverage: limited — 0 code files analyzed&#10;[C]✔ trust-card.json[/C] [D](Trust Card v2, status: ungraded)[/D]&#10;[C]✔ opentrustbench-report.sarif[/C] [D](GitHub Code Scanning)[/D]&#10;[C]✔ opentrustbench-report.md[/C]" aria-label="Sample scan output">
+          <div class="term-bar"><i></i><i></i><i></i><span>terminal — sample output, secure fixture (Grade U)</span></div>
+          <div class="term-body"></div>
+        </div>
+        <figure class="reveal" style="margin:32px 0 0">
+          <img src="assets/demo.gif" alt="Recorded OpenTrustBench scan running in a terminal (7 seconds)" loading="lazy" style="width:100%;border-radius:var(--radius);border:1px solid var(--border)">
+          <figcaption class="muted small" style="margin-top:8px">A recorded run (7s). The typed terminal above illustrates the same output.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how" aria-labelledby="how-h" style="padding-top:0">
+      <div class="wrap">
+        <p class="eyebrow reveal">How it works</p>
+        <h2 id="how-h" class="reveal">Three steps to a verifiable grade.</h2>
+        <div class="steps">
+          <div class="step reveal">
+            <div class="k">01 — SCAN</div>
+            <h3>Point at anything</h3>
+            <p>A local directory, a GitHub URL, or an npm package. Recursive detection, eight rules, permission extraction, dependency audit. Seconds, locally.</p>
+          </div>
+          <div class="step reveal">
+            <div class="k">02 — GRADE</div>
+            <h3>Get a Trust Card</h3>
+            <p>Letter grade A–F, 0–100 score, OWASP-mapped findings with file:line, plus SARIF for your Security tab and a <code>--fail-on</code> CI gate.</p>
+          </div>
+          <div class="step reveal">
+            <div class="k">03 — PROVE</div>
+            <h3>Share the evidence</h3>
+            <p>Embed a bound badge that links to a public report page — grade image and evidence travel together. See the <a href="r/">live registry</a>.</p>
+            <p style="margin:12px 0 0"><a href="r/self-packages-cli.html"><img src="r/self-packages-cli.svg" alt="OpenTrustBench grade A badge for the shipped CLI" loading="lazy"></a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Registry preview: strict grades, honestly withheld -->
+    <section id="registry-preview" aria-labelledby="reg-h" style="padding-top:0">
+      <div class="wrap">
+        <p class="eyebrow reveal">The registry · snapshot 2026-09-18 · re-scanned weekly</p>
+        <h2 id="reg-h" class="reveal">Strict grades, honestly withheld.</h2>
+        <p class="lede reveal">One external target graded; 49 withheld as U for limited static coverage. Full evidence behind every card.</p>
+        <div class="steps">
+          <div class="step reveal">
+            <div class="k">GRADED NOW</div>
+            <table class="data" style="margin-top:14px">
+              <tbody>
+                <tr><td><span class="grade gA">A</span></td><td><a href="r/wong2-mcp-cli.html">mcp-cli</a></td><td class="mono">96</td></tr>
+                <tr><td><span class="grade gA">A</span></td><td><a href="r/self-packages-cli.html">opentrustbench CLI (self)</a></td><td class="mono">90</td></tr>
+                <tr><td><span class="grade gF">F</span></td><td><a href="r/self-examples-vulnerable-mcp-server.html">vulnerable fixture (self)</a></td><td class="mono">33</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="step reveal">
+            <div class="k">WITHHELD (U)</div>
+            <h3>49 of 50 externals ungraded.</h3>
+            <p>U means limited static coverage — unsupported files present — not a zero and not a safety verdict. Ungraded cards keep their findings but get no score and stay out of rankings and averages. <a href="r/">Filter the registry by U →</a></p>
+          </div>
+          <div class="step reveal">
+            <div class="k">REPRODUCE</div>
+            <h3>Re-scan anything.</h3>
+            <p>Every card records its upstream commit sha, so any grade can be re-verified exactly. <a href="methodology.html">How scoring works</a> · <a href="r/">Explore the registry →</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Install -->
+    <section id="install" aria-labelledby="install-h" style="padding-top:0">
+      <div class="wrap">
+        <p class="eyebrow reveal">Install</p>
+        <h2 id="install-h" class="reveal">Running in 60 seconds.</h2>
+        <div class="reveal">
+          <div class="tabs" role="tablist" aria-label="Install methods">
+            <button class="chip" role="tab" id="tab-npm" aria-selected="true" aria-controls="panel-npm" data-tab="npm">npm</button>
+            <button class="chip" role="tab" id="tab-pip" aria-selected="false" aria-controls="panel-pip" data-tab="pip" tabindex="-1">pip</button>
+            <button class="chip" role="tab" id="tab-brew" aria-selected="false" aria-controls="panel-brew" data-tab="brew" tabindex="-1">Homebrew</button>
+            <button class="chip" role="tab" id="tab-docker" aria-selected="false" aria-controls="panel-docker" data-tab="docker" tabindex="-1">Docker</button>
+            <button class="chip" role="tab" id="tab-vscode" aria-selected="false" aria-controls="panel-vscode" data-tab="vscode" tabindex="-1">VS Code</button>
+            <button class="chip" role="tab" id="tab-action" aria-selected="false" aria-controls="panel-action" data-tab="action" tabindex="-1">GitHub Action</button>
+          </div>
+          <div class="tabpanels">
+            <div role="tabpanel" id="panel-npm" aria-labelledby="tab-npm" data-panel="npm">
+              <pre id="cmd-npm">npm install -g @opentrustbench/cli
+opentrustbench scan ./my-mcp-server --quiet</pre>
+              <div class="tab-meta"><button class="btn btn-ghost btn-sm" data-copy-target="#cmd-npm">Copy</button><a href="https://www.npmjs.com/package/@opentrustbench/cli">npm package →</a></div>
+            </div>
+            <div role="tabpanel" id="panel-pip" aria-labelledby="tab-pip" data-panel="pip" hidden>
+              <pre id="cmd-pip">pip install opentrustbench  # needs Node 18+ for the CLI engine
+opentrustbench scan ./my-mcp-server --quiet</pre>
+              <div class="tab-meta"><button class="btn btn-ghost btn-sm" data-copy-target="#cmd-pip">Copy</button><span class="muted">Needs Node 18+ · <a href="https://pypi.org/project/opentrustbench/">PyPI →</a></span></div>
+            </div>
+            <div role="tabpanel" id="panel-brew" aria-labelledby="tab-brew" data-panel="brew" hidden>
+              <pre id="cmd-brew">brew tap eulogik/opentrustbench
+brew install opentrustbench
+opentrustbench scan ./my-mcp-server --quiet</pre>
+              <div class="tab-meta"><button class="btn btn-ghost btn-sm" data-copy-target="#cmd-brew">Copy</button><a href="https://github.com/eulogik/homebrew-opentrustbench">Tap repo →</a></div>
+            </div>
+            <div role="tabpanel" id="panel-docker" aria-labelledby="tab-docker" data-panel="docker" hidden>
+              <pre id="cmd-docker">docker pull eulogik/opentrustbench
+docker run --rm -v $(pwd):/workspace eulogik/opentrustbench scan .</pre>
+              <div class="tab-meta"><button class="btn btn-ghost btn-sm" data-copy-target="#cmd-docker">Copy</button><a href="https://hub.docker.com/r/eulogik/opentrustbench">Docker Hub →</a></div>
+            </div>
+            <div role="tabpanel" id="panel-vscode" aria-labelledby="tab-vscode" data-panel="vscode" hidden>
+              <pre id="cmd-vscode">code --install-extension eulogik.opentrustbench</pre>
+              <div class="tab-meta"><button class="btn btn-ghost btn-sm" data-copy-target="#cmd-vscode">Copy</button><a href="https://marketplace.visualstudio.com/items?itemName=eulogik.opentrustbench">Marketplace →</a></div>
+            </div>
+            <div role="tabpanel" id="panel-action" aria-labelledby="tab-action" data-panel="action" hidden>
+              <pre id="cmd-action">- uses: eulogik/opentrustbench-action@v0.1.3
+  with:
+    target: .
+    fail-on: high</pre>
+              <div class="tab-meta"><button class="btn btn-ghost btn-sm" data-copy-target="#cmd-action">Copy</button><span class="muted">Needs <code>security-events: write</code> for SARIF upload</span></div>
+            </div>
+          </div>
+          <p class="muted">No install? Run it directly with <code>npx @opentrustbench/cli scan .</code> From source: <code>git clone https://github.com/eulogik/OpenTrustBench.git &amp;&amp; cd OpenTrustBench &amp;&amp; npm install</code>. Enforce it in CI:</p>
+          <pre>opentrustbench scan . --fail-on high --quiet --output-dir ./trust</pre>
+          <p class="muted">Or drop in the <a href="https://github.com/eulogik/opentrustbench-action">GitHub Action</a> — scan plus SARIF upload to your Security tab.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing: quiet, honest -->
+    <section id="pricing" aria-labelledby="pricing-h" style="padding-top:0">
+      <div class="wrap">
+        <p class="eyebrow reveal">Pricing</p>
+        <h2 id="pricing-h" class="reveal">The CLI is the product. It's free.</h2>
+        <div class="steps">
+          <div class="step reveal">
+            <div class="k">CLI</div>
+            <h3>$0, forever</h3>
+            <p>Unlimited local scans, Trust Cards, bound badges, SARIF, CI gate. Open source, zero telemetry.</p>
+          </div>
+          <div class="step reveal">
+            <div class="k">EXPERT REVIEW</div>
+            <h3>Scoped per target</h3>
+            <p>Manual triage of your results plus a remediation plan, on request. <a href="https://github.com/eulogik/OpenTrustBench/issues/new">Contact us</a>.</p>
+          </div>
+          <div class="step reveal">
+            <div class="k">ENTERPRISE</div>
+            <h3>Custom</h3>
+            <p>Custom rules, evidence helpers, priority support. <a href="https://github.com/eulogik/OpenTrustBench/issues/new">Contact us</a>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" aria-labelledby="faq-h" style="padding-top:0">
+      <div class="wrap" style="max-width:820px">
+        <p class="eyebrow reveal">FAQ</p>
+        <h2 id="faq-h" class="reveal">Asked, answered.</h2>
+        <div class="reveal">
+          <details class="faq" open>
+            <summary>What is OpenTrustBench?</summary>
+            <div class="a"><p>OpenTrustBench is a free, local-first security scanner for AI agents and MCP servers. It runs 8 OWASP-mapped static rules, extracts a permission manifest, and issues a Trust Card graded A–F — with SARIF output for CI. It answers: can I trust this agent, what may it do, and can I prove it?</p></div>
+          </details>
+          <details class="faq">
+            <summary>How do I scan an MCP server?</summary>
+            <div class="a"><p>Point the CLI at a local directory, a GitHub URL, or an npm package. You get a Trust Card, SARIF and Markdown reports in seconds. Nothing leaves your machine — GitHub targets are cloned to a temp directory locally.</p></div>
+          </details>
+          <details class="faq">
+            <summary>What is a Trust Card?</summary>
+            <div class="a"><p>A portable, machine-readable credential (<code>opentrustbench/trust-card/v2</code>): letter grade, 0–100 score, findings with file:line evidence, permission scope, provenance signals, coverage, and inferred host compatibility. Bound badges link each grade to its public evidence page.</p></div>
+          </details>
+          <details class="faq">
+            <summary>Is OpenTrustBench a certification?</summary>
+            <div class="a"><p>No. OpenTrustBench is a static scanner, not a certification body. Attack analysis is heuristic (no payloads execute), workflow eval is simulated (nothing runs), and Trust Cards are evidence input for your own review — never a compliance verdict.</p></div>
+          </details>
+          <details class="faq">
+            <summary>Does my code leave my machine?</summary>
+            <div class="a"><p>No. The CLI runs locally with zero telemetry and no OpenTrustBench data retention. GitHub-URL scans clone the public repo to a temp directory on your machine. Dependency auditing queries the npm registry.</p></div>
+          </details>
+          <details class="faq">
+            <summary>What do the grades mean?</summary>
+            <div class="a"><p>A (90+) through F (below 40), weighted across security findings, permission scope, provenance, reliability and stability. <strong>U means ungraded</strong>: coverage was insufficient, so no score was issued — currently 50 of 53 cards. Ungraded cards are excluded from averages and rankings. <a href="methodology.html">Full scoring methodology</a>.</p></div>
+          </details>
+          <details class="faq">
+            <summary>Why shouldn't I scan the OpenTrustBench monorepo itself?</summary>
+            <div class="a"><p>Because it contains its own test ammunition — and a scanner that <em>didn't</em> flag it would be the real scandal. The three intentional sources: (1) <code>examples/vulnerable-mcp-server</code>, a deliberately vulnerable fixture; (2) our unit tests, which must contain <code>eval(</code>, <code>exec(</code> and <code>transferFunds(</code> strings to prove the detector catches them; (3) our automation scripts, which legitimately shell out to <code>git</code> and <code>npm</code> with hardcoded local arguments. The monorepo itself currently grades U (60 code files analyzed against 66 unsupported implementation files — limited coverage, so the grade is withheld). The shipped product (<code>packages/cli</code>) self-scans at <a href="r/self-packages-cli.html">A (90/100)</a>. Rule of thumb: grade the artifact you ship, not the monorepo that tests it.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section aria-label="Get started" style="padding-top:0">
+      <div class="wrap" style="text-align:center">
+        <h2 class="reveal">Ship agents you can defend.</h2>
+        <p class="lede reveal" style="margin-left:auto;margin-right:auto">One command. Thirty seconds. A grade you can show your auditor.</p>
+        <div class="hero-ctas reveal" style="justify-content:center">
+          <span class="cmd"><span>npx @opentrustbench/cli scan .</span><button type="button" data-copy="npx @opentrustbench/cli scan .">Copy</button></span>
+          <a class="btn btn-ghost" href="r/">Browse the registry</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <a class="brand" href="./" style="margin-bottom:14px"><span class="brand-mark">O</span>OpenTrustBench</a>
+          <p style="margin-top:14px">Trust and security verification for autonomous AI agents and MCP servers. Open source, local-first.</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#install">Install</a></li>
+            <li><a href="https://www.npmjs.com/package/@opentrustbench/cli">npm package</a></li>
+            <li><a href="r/">Registry</a></li>
+            <li><a href="methodology.html">Methodology</a></li>
+            <li><a href="https://github.com/eulogik/OpenTrustBench">GitHub</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="changelog.html">Changelog</a></li>
+            <li><a href="feed.xml">Changelog feed</a></li>
+            <li><a href="https://github.com/eulogik/OpenTrustBench/blob/main/docs/STATE-OF-MCP-2026.md">State of MCP report</a></li>
+            <li><a href="llms.txt">llms.txt</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Project</h4>
+          <ul>
+            <li><a href="https://github.com/eulogik/OpenTrustBench/issues/new">Contact</a></li>
+            <li><a href="https://github.com/eulogik/OpenTrustBench/blob/main/LICENSE">License (Apache-2.0)</a></li>
+            <li><a href="https://github.com/eulogik/OpenTrustBench/security/policy">Security policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot-base">
+        <span>© 2026 OpenTrustBench · Apache-2.0 · Refreshed weekly from 50 external targets + 3 self-scans · Built by <a href="https://eulogik.com">Eulogik</a></span>
+        <span>Static site · No cookies · No tracking</span>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+# Run from the repo root: docker compose -f docker/docker-compose.yml run scan
+services:
+  scan:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    volumes:
+      - ../:/workspace
+    command: ["scan", ".", "--quiet"]
+
+  attack:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    volumes:
+      - ../:/workspace
+    command: ["attack", ".", "--quiet"]
+
+  eval:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    volumes:
+      - ../:/workspace
+    command: ["eval", "examples/sample-workflow.yaml"]

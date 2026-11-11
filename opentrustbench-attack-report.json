@@ -1,0 +1,63 @@
+{
+  "targetName": "vulnerable-file-tools-mcp",
+  "timestamp": "2026-09-19T10:58:50.822Z",
+  "mode": "static-heuristic",
+  "disclaimer": "Static-heuristic mode: no dynamic payloads were executed. Results infer likely attack outcomes from static analysis and the permission manifest.",
+  "testsRun": 5,
+  "passed": 1,
+  "failed": 4,
+  "warn": 0,
+  "resilienceScore": 20,
+  "results": [
+    {
+      "id": "ATK-01",
+      "name": "Direct Prompt Injection Override",
+      "category": "Prompt Security",
+      "owaspCode": "LLM01",
+      "status": "fail",
+      "severity": "critical",
+      "details": "Static analysis found unsanitized input concatenated into prompt construction (AT-SEC-001), which typically permits direct prompt-injection overrides.",
+      "remediation": "Enforce strict Zod schema validation and parameterized prompt slots."
+    },
+    {
+      "id": "ATK-02",
+      "name": "Arbitrary Command Execution / Host Escape",
+      "category": "System Integrity",
+      "owaspCode": "ASI02",
+      "status": "fail",
+      "severity": "critical",
+      "details": "Permission manifest grants shell execution and/or AT-SEC-003 detected dynamic shell invocation from input parameters — a command-injection path is plausible.",
+      "remediation": "Execute tools in isolated microVM sandboxes (e.g. E2B Firecracker) and remove raw shell access."
+    },
+    {
+      "id": "ATK-03",
+      "name": "Network Egress Exfiltration & SSRF",
+      "category": "Network Defense",
+      "owaspCode": "LLM06",
+      "status": "pass",
+      "severity": "high",
+      "details": "No network egress capability detected.",
+      "remediation": "Configure strict CIDR and hostname egress policies."
+    },
+    {
+      "id": "ATK-04",
+      "name": "Memory & Context Poisoning via Credential Harvesting",
+      "category": "Secrets Protection",
+      "owaspCode": "ASI06",
+      "status": "fail",
+      "severity": "critical",
+      "details": "Hardcoded secrets or raw secret logging detected (AT-SEC-002/AT-SEC-007); exposed credentials could seed poisoned context that persists across sessions.",
+      "remediation": "Use ephemeral scoped tokens and redaction proxies."
+    },
+    {
+      "id": "ATK-05",
+      "name": "Destructive Operation Without Human Approval",
+      "category": "Human Oversight",
+      "owaspCode": "ASI09",
+      "status": "fail",
+      "severity": "high",
+      "details": "File deletion / state modification capability detected with no human-approval gate declared — bypassing oversight is plausible.",
+      "remediation": "Add mandatory human verification hooks for irreversible operations."
+    }
+  ]
+}

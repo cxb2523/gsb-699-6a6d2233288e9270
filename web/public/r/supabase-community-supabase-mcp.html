@@ -1,0 +1,2355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>supabase-community__supabase-mcp — Trust Card (Grade U) · OpenTrustBench</title>
+<meta name="description" content="Static security scan of supabase-community__supabase-mcp: grade U (Ungraded — insufficient static coverage), 3 findings, scope excessive. Not ranked: insufficient static coverage.">
+<link rel="canonical" href="https://opentrustbench.com/r/supabase-community-supabase-mcp.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="supabase-community__supabase-mcp — OpenTrustBench Grade U">
+<meta property="og:url" content="https://opentrustbench.com/r/supabase-community-supabase-mcp.html">
+<meta property="og:image" content="https://opentrustbench.com/og-image.png">
+  <meta property="og:image:width" content="1280">
+  <meta property="og:image:height" content="640">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://opentrustbench.com/#org","name":"OpenTrustBench","url":"https://opentrustbench.com/","sameAs":["https://github.com/eulogik/OpenTrustBench"]},{"@type":"Article","headline":"supabase-community__supabase-mcp — OpenTrustBench Grade U (Ungraded — insufficient static coverage)","description":"Static security scan of supabase-community__supabase-mcp: 3 findings (1 critical), permission scope excessive.","datePublished":"2026-11-09","dateModified":"2026-11-09","author":{"@id":"https://opentrustbench.com/#org"},"publisher":{"@id":"https://opentrustbench.com/#org"},"mainEntityOfPage":"https://opentrustbench.com/r/supabase-community-supabase-mcp.html"}]}</script>
+<link rel="preload" href="../assets/fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-scan="2026-11-09">
+<a class="skip" href="#main">Skip to content</a>
+<nav class="nav" aria-label="Main"><div class="nav-inner">
+<a class="brand" href="../"><span class="brand-mark">O</span>OpenTrustBench</a>
+<div class="nav-links" id="nav-links"><a href="../#how">How it works</a><a href="./">Registry</a><a href="../methodology.html">Methodology</a></div>
+<div class="nav-cta"><a class="btn btn-ghost btn-sm" href="https://github.com/eulogik/OpenTrustBench">GitHub</a><button class="theme-toggle" type="button" aria-label="Toggle theme"><svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button><button class="burger" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">☰</button></div>
+</div></nav>
+<main id="main"><div class="report-wrap">
+<p class="muted small"><a href="./">← All scanned servers</a></p>
+<p id="stale" hidden class="callout warn">⚠️ This snapshot is over 30 days old — treat the grade as stale until the next refresh. Re-scan locally to verify.</p>
+<script>try{var d=new Date(document.body.dataset.scan);if((Date.now()-d.getTime())/864e5>30){document.getElementById('stale').hidden=false;}}catch(_){}</script>
+<p class="eyebrow">Trust Card · Static snapshot</p>
+<h1>supabase-community__supabase-mcp <span class="grade ">U</span></h1>
+<p class="lede"><strong style="color:var(--text)">Ungraded — insufficient static coverage</strong> · 3 findings (1 critical) · scope excessive · Not ranked: insufficient static coverage.</p>
+<p class="muted">Scanned 2026-11-09 · engine v0.1.3 (8 regex rules, OWASP-mapped) · upstream supabase-community/supabase-mcp @ 8a08e48 (2026-11-09)</p>
+<h2>Score breakdown</h2>
+<p>No numeric score or breakdown: insufficient static coverage. Findings remain actionable; absence of findings is not evidence of safety.</p>
+<p class="muted">Insufficient static coverage: Unsupported source present; Symlinks or special files were not examined. Findings remain actionable; absence of findings is not evidence of safety.</p>
+<h2>Coverage: limited</h2>
+<p>Static-heuristic scope: 144 analyzed / 171 discovered files; 8 unsupported source files; 29 excluded; 0 read errors; 0 truncations. This is not a semantic coverage percentage or proof of safety.</p>
+<ul><li>Unsupported source present</li><li>Symlinks or special files were not examined</li><li>Coverage describes the files read and regex rules applied, not semantic, runtime, or dependency coverage.</li><li>Supported code is JavaScript, TypeScript, and Python; JSON/YAML receive only the credential rule.</li><li>Skill instructions and other prose are not code-analyzed; declared controls are not verified enforcement.</li><li>Ignored directories, declarations, and non-implementation assets are outside rule scope.</li></ul>
+<details><summary>File coverage, applied rules and scan limits</summary><pre>{
+  &quot;mode&quot;: &quot;static-heuristic&quot;,
+  &quot;status&quot;: &quot;limited&quot;,
+  &quot;reasons&quot;: [
+    &quot;Unsupported source present&quot;,
+    &quot;Symlinks or special files were not examined&quot;
+  ],
+  &quot;limitations&quot;: [
+    &quot;Coverage describes the files read and regex rules applied, not semantic, runtime, or dependency coverage.&quot;,
+    &quot;Supported code is JavaScript, TypeScript, and Python; JSON/YAML receive only the credential rule.&quot;,
+    &quot;Skill instructions and other prose are not code-analyzed; declared controls are not verified enforcement.&quot;,
+    &quot;Ignored directories, declarations, and non-implementation assets are outside rule scope.&quot;
+  ],
+  &quot;discoveredFiles&quot;: 171,
+  &quot;analyzedFiles&quot;: [
+    {
+      &quot;path&quot;: &quot;.github/dependabot.yml&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 223,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;.github/workflows/biome.yml&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 447,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;.github/workflows/check-management-api-types.yml&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 1984,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;.github/workflows/publish-preview.yml&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 1472,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;.github/workflows/release.yml&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 10179,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;.github/workflows/sync-management-api-types.yml&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 1840,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;.github/workflows/tests.yml&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 1730,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;.release-please-manifest.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 124,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;.vscode/settings.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 141,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;biome.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 870,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;package.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 704,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-postgrest/package.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 1356,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-postgrest/src/index.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 29,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-postgrest/src/server.test.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 15190,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-postgrest/src/server.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 3424,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-postgrest/src/stdio.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 889,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-postgrest/src/util.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 322,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-postgrest/tsconfig.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 96,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-postgrest/tsup.config.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 249,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/package.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 2747,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/scripts/generate-management-api-types.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 911,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/scripts/registry/update-version.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1213,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/server.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 2959,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/advisories/advisories.test.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 5064,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/advisories/index.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 139,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/advisories/rls-disabled.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 2300,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/advisories/schema.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1278,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/cli.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 3313,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/confirmation-instant-cancel.test.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 26859,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/content-api/graphql.test.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 4475,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/content-api/graphql.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 5700,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/content-api/index.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1074,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/edge-function.test.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1842,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/edge-function.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 2116,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/errors.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 827,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/index.test.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 2599,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/index.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1001,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/logs.test.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 3744,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/logs.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 4047,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/management-api/index.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 3550,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/management-api/types.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 462846,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/management-api-v2/index.test.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1364,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/management-api-v2/index.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 2195,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/management-api-v2/types.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 491656,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/observation-confirmation.test.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 7471,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/observation-notebook.test.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 19984,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/observation-operations.test.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1167,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/observation-sql.test.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 14774,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/observation.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 2598,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/password.test.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1849,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/password.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1279,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/pg-meta/index.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1717,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/pg-meta/types.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 2436,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/platform/api-platform.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 28187,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/platform/feedback.test.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 8478,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/platform/feedback.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 3410,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/platform/index.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 28,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/platform/types.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 14573,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/pricing.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1278,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/regions.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 317,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/server.account.test.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 27813,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/server.branching.test.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 37606,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/server.database.test.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 55472,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/server.debugging.test.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 16910,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/server.development.test.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 2312,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/server.functions.test.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 48408,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/server.notebooks.test.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 104583,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/server.storage.test.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 3595,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/server.test.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 31724,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/server.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 17372,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/tools/account-tools.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 14794,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/tools/branching-tools.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 11782,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/tools/confirmation-observation.test.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 4543,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/tools/confirmation.test.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 4169,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/tools/confirmation.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 16606,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/tools/database-operation-tools.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 20547,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/tools/debugging-tools.test.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 5060,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/tools/debugging-tools.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 12708,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/tools/destructive-sql.test.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 12668,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/tools/destructive-sql.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 9610,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/tools/development-tools.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 3492,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/tools/docs-tools.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1589,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/tools/edge-function-tools.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 4605,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/tools/feedback-tools.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 3388,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/tools/notebook-cells.test.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 3782,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/tools/notebook-cells.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 4353,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/tools/notebook-tools.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 30182,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/tools/secret-tools.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 7965,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/tools/sql-data-literals.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1650,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/tools/sql-lexer.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 3038,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/tools/storage-tools.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 3312,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/tools/tool-schemas.test.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 8927,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/tools/tool-schemas.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 9359,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/tools/util.test.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 4106,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/tools/util.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 3377,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/transports/http.test.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 5467,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/transports/http.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 489,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/transports/local-http-entry.test.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 39046,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/transports/local-http-entry.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 8159,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/transports/util.test.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1335,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/transports/util.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 350,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/types.test.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1072,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/types.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 975,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/util.test.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 2775,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/util.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 3325,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/test/confirmation-results.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1350,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/test/e2e/functions.e2e.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 3976,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/test/e2e/projects.e2e.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 3252,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/test/e2e/prompt-injection.e2e.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 3883,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/test/e2e/setup.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 506,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/test/e2e/utils.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 2145,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/test/extensions.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1611,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/test/mocks.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 45470,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/test/observation-test-helpers.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 7867,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/test/plugins/text-loader.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 400,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/test/server-harness.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 9592,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/test/stdio.integration.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 11653,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/tsconfig.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 92,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/tsup.config.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 378,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/vitest.config.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 485,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/vitest.setup.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 203,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/vitest.workspace.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 538,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-utils/package.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 1151,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-utils/src/index.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 270,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-utils/src/observation-test-helpers.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 2387,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-utils/src/observation.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 3012,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-utils/src/server-observation.test.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 13571,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-utils/src/server.test.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 10191,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-utils/src/server.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 19526,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-utils/src/stream-transport.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 2077,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-utils/src/types.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 493,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-utils/src/util.test.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 2018,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-utils/src/util.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1972,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-utils/tsconfig.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 99,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-utils/tsup.config.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 233,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;pnpm-lock.yaml&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 113667,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;pnpm-workspace.yaml&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 357,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;release-please-config.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 1095,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;scripts/dev-http.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 908,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;scripts/fixtures/packed-platform-consumer/cjs-check.cjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1505,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;scripts/fixtures/packed-platform-consumer/modern-call.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 7997,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;scripts/fixtures/packed-platform-consumer/tsconfig.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 291,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;scripts/fixtures/packed-platform-consumer/types-check.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 6659,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;scripts/test-packed-platform-consumer.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 7682,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    }
+  ],
+  &quot;unsupportedSourceFiles&quot;: [
+    &quot;.github/CODEOWNERS&quot;,
+    &quot;packages/mcp-server-supabase/scripts/registry/login.sh&quot;,
+    &quot;packages/mcp-server-supabase/src/pg-meta/columns.sql&quot;,
+    &quot;packages/mcp-server-supabase/src/pg-meta/extensions.sql&quot;,
+    &quot;packages/mcp-server-supabase/src/pg-meta/tables.sql&quot;,
+    &quot;supabase/migrations/20241220232417_todos.sql&quot;,
+    &quot;supabase/migrations/20250109000000_add_todo_policies.sql&quot;,
+    &quot;supabase/seed.sql&quot;
+  ],
+  &quot;excludedFiles&quot;: [
+    {
+      &quot;path&quot;: &quot;.git&quot;,
+      &quot;reason&quot;: &quot;ignored-directory&quot;
+    },
+    {
+      &quot;path&quot;: &quot;CLAUDE.md&quot;,
+      &quot;reason&quot;: &quot;non-regular-file&quot;
+    },
+    {
+      &quot;path&quot;: &quot;.github/CODEOWNERS&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;.github/PULL_REQUEST_TEMPLATE.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;.gitignore&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;AGENTS.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;CONTRIBUTING.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;LICENSE&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;README.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;SECURITY.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;docs/production.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;mise.lock&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;mise.toml&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-postgrest/CHANGELOG.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-postgrest/README.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/.gitignore&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/CHANGELOG.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/scripts/registry/login.sh&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/pg-meta/columns.sql&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/pg-meta/extensions.sql&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/pg-meta/tables.sql&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/src/types/sql.d.ts&quot;,
+      &quot;reason&quot;: &quot;type-declaration&quot;
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-server-supabase/test/extensions.d.ts&quot;,
+      &quot;reason&quot;: &quot;type-declaration&quot;
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-utils/CHANGELOG.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-utils/README.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;supabase/config.toml&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;supabase/migrations/20241220232417_todos.sql&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;supabase/migrations/20250109000000_add_todo_policies.sql&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;supabase/seed.sql&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    }
+  ],
+  &quot;readErrors&quot;: [],
+  &quot;truncation&quot;: [],
+  &quot;limits&quot;: {
+    &quot;maxFiles&quot;: 4000,
+    &quot;maxDepth&quot;: 12,
+    &quot;maxFileBytes&quot;: 1048576
+  }
+}</pre></details>
+<h2>Fix first (3 critical/high)</h2>
+<table class="data"><thead><tr><th>Severity</th><th>Rule</th><th>Finding</th><th>Remediation</th></tr></thead><tbody><tr><td><strong style="color:var(--bad)">CRITICAL</strong></td><td><code>AT-SEC-003</code> (ASI02)</td><td>Unbounded Dynamic Shell Execution<br><code class="muted">scripts/dev-http.mjs:10</code><br><span class="muted">Evidence: </span><code>const child = spawn(cmd, args, { cwd, stdio: 'inherit' });</code></td><td>Strictly restrict shell execution to an immutable allowlist of binary commands with explicit argument arrays, or execute inside microVM sandboxes.</td></tr><tr><td><strong style="color:var(--orange)">HIGH</strong></td><td><code>AT-SEC-006</code> (LLM06)</td><td>Unfiltered SSRF / Arbitrary Network Egress<br><code class="muted">packages/mcp-server-postgrest/src/server.ts:90</code><br><span class="muted">Evidence: </span><code>const response = await fetch(url, {</code></td><td>Define an explicit egress domain allowlist and block private IP ranges (127.0.0.1, 10.0.0.0/8, 169.254.169.254).</td></tr><tr><td><strong style="color:var(--orange)">HIGH</strong></td><td><code>AT-SEC-006</code> (LLM06)</td><td>Unfiltered SSRF / Arbitrary Network Egress<br><code class="muted">packages/mcp-server-supabase/src/content-api/graphql.ts:167</code><br><span class="muted">Evidence: </span><code>const response = await fetch(url, {</code></td><td>Define an explicit egress domain allowlist and block private IP ranges (127.0.0.1, 10.0.0.0/8, 169.254.169.254).</td></tr></tbody></table>
+<h2>Permissions</h2>
+<p>Scope: <strong>excessive</strong> · Shell: enabled · Network egress: yes · File deletion: enabled · Human approval: none</p>
+<h2>Provenance</h2>
+<p>License: none detected · Lockfile: yes · Security policy: yes · Signals: present (documentary, not a safety verdict)</p>
+<div class="callout"><p><strong>Independently scanned by the OpenTrustBench registry</strong> (not self-reported by the project). Static analysis only — no code executed, findings need human triage, counts may include test/example code. <strong>Static snapshot; re-scan before relying on it:</strong> <code>npx @opentrustbench/cli scan https://github.com/supabase-community/supabase-mcp</code>. Scores move with every upstream commit; pages refresh weekly. <a href="../methodology.html">How scoring works</a>.</p></div>
+</div></main>
+<footer><div class="wrap"><div class="foot-base" style="border-top:none;padding-top:0"><span>© 2026 OpenTrustBench · Apache-2.0 · Built by <a href="https://eulogik.com">Eulogik</a></span><span><a href="../">Home</a> · <a href="./">Registry</a></span></div></div></footer>
+<script src="../assets/site.js" defer></script>
+</body></html>

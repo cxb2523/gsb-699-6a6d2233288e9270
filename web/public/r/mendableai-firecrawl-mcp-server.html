@@ -1,0 +1,1764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>mendableai__firecrawl-mcp-server — Trust Card (Grade U) · OpenTrustBench</title>
+<meta name="description" content="Static security scan of mendableai__firecrawl-mcp-server: grade U (Ungraded — insufficient static coverage), 7 findings, scope excessive. Not ranked: insufficient static coverage.">
+<link rel="canonical" href="https://opentrustbench.com/r/mendableai-firecrawl-mcp-server.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mendableai__firecrawl-mcp-server — OpenTrustBench Grade U">
+<meta property="og:url" content="https://opentrustbench.com/r/mendableai-firecrawl-mcp-server.html">
+<meta property="og:image" content="https://opentrustbench.com/og-image.png">
+  <meta property="og:image:width" content="1280">
+  <meta property="og:image:height" content="640">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://opentrustbench.com/#org","name":"OpenTrustBench","url":"https://opentrustbench.com/","sameAs":["https://github.com/eulogik/OpenTrustBench"]},{"@type":"Article","headline":"mendableai__firecrawl-mcp-server — OpenTrustBench Grade U (Ungraded — insufficient static coverage)","description":"Static security scan of mendableai__firecrawl-mcp-server: 7 findings (3 critical), permission scope excessive.","datePublished":"2026-11-09","dateModified":"2026-11-09","author":{"@id":"https://opentrustbench.com/#org"},"publisher":{"@id":"https://opentrustbench.com/#org"},"mainEntityOfPage":"https://opentrustbench.com/r/mendableai-firecrawl-mcp-server.html"}]}</script>
+<link rel="preload" href="../assets/fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-scan="2026-11-09">
+<a class="skip" href="#main">Skip to content</a>
+<nav class="nav" aria-label="Main"><div class="nav-inner">
+<a class="brand" href="../"><span class="brand-mark">O</span>OpenTrustBench</a>
+<div class="nav-links" id="nav-links"><a href="../#how">How it works</a><a href="./">Registry</a><a href="../methodology.html">Methodology</a></div>
+<div class="nav-cta"><a class="btn btn-ghost btn-sm" href="https://github.com/eulogik/OpenTrustBench">GitHub</a><button class="theme-toggle" type="button" aria-label="Toggle theme"><svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button><button class="burger" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">☰</button></div>
+</div></nav>
+<main id="main"><div class="report-wrap">
+<p class="muted small"><a href="./">← All scanned servers</a></p>
+<p id="stale" hidden class="callout warn">⚠️ This snapshot is over 30 days old — treat the grade as stale until the next refresh. Re-scan locally to verify.</p>
+<script>try{var d=new Date(document.body.dataset.scan);if((Date.now()-d.getTime())/864e5>30){document.getElementById('stale').hidden=false;}}catch(_){}</script>
+<p class="eyebrow">Trust Card · Static snapshot</p>
+<h1>mendableai__firecrawl-mcp-server <span class="grade ">U</span></h1>
+<p class="lede"><strong style="color:var(--text)">Ungraded — insufficient static coverage</strong> · 7 findings (3 critical) · scope excessive · Not ranked: insufficient static coverage.</p>
+<p class="muted">Scanned 2026-11-09 · engine v0.1.3 (8 regex rules, OWASP-mapped) · upstream mendableai/firecrawl-mcp-server @ f769f53 (2026-11-09)</p>
+<h2>Score breakdown</h2>
+<p>No numeric score or breakdown: insufficient static coverage. Findings remain actionable; absence of findings is not evidence of safety.</p>
+<p class="muted">Insufficient static coverage: Unsupported source present. Findings remain actionable; absence of findings is not evidence of safety.</p>
+<h2>Coverage: limited</h2>
+<p>Static-heuristic scope: 112 analyzed / 127 discovered files; 3 unsupported source files; 16 excluded; 0 read errors; 0 truncations. This is not a semantic coverage percentage or proof of safety.</p>
+<ul><li>Unsupported source present</li><li>Coverage describes the files read and regex rules applied, not semantic, runtime, or dependency coverage.</li><li>Supported code is JavaScript, TypeScript, and Python; JSON/YAML receive only the credential rule.</li><li>Skill instructions and other prose are not code-analyzed; declared controls are not verified enforcement.</li><li>Ignored directories, declarations, and non-implementation assets are outside rule scope.</li></ul>
+<details><summary>File coverage, applied rules and scan limits</summary><pre>{
+  &quot;mode&quot;: &quot;static-heuristic&quot;,
+  &quot;status&quot;: &quot;limited&quot;,
+  &quot;reasons&quot;: [
+    &quot;Unsupported source present&quot;
+  ],
+  &quot;limitations&quot;: [
+    &quot;Coverage describes the files read and regex rules applied, not semantic, runtime, or dependency coverage.&quot;,
+    &quot;Supported code is JavaScript, TypeScript, and Python; JSON/YAML receive only the credential rule.&quot;,
+    &quot;Skill instructions and other prose are not code-analyzed; declared controls are not verified enforcement.&quot;,
+    &quot;Ignored directories, declarations, and non-implementation assets are outside rule scope.&quot;
+  ],
+  &quot;discoveredFiles&quot;: 127,
+  &quot;analyzedFiles&quot;: [
+    {
+      &quot;path&quot;: &quot;.eslintrc.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 778,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;.github/actions/release-summary/action.yml&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 1193,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;.github/actions/supersede-waiting-runs/action.yml&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 402,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;.github/workflows/ci.yml&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 792,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;.github/workflows/image.yml&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 4257,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;.github/workflows/publish.yml&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 9923,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;gemini-extension.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 701,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;glama.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 122,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;package.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 2374,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;pnpm-lock.yaml&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 90261,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;pnpm-workspace.yaml&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 290,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;scripts/agent-metadata-policy.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 12626,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;scripts/http-surface-diff.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 16869,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;scripts/stdio-surface-diff.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 10844,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;scripts/surface-common.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 14571,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;server.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 1232,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;smithery.yaml&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 812,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;src/alexandria-feedback-tokens.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 3784,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;src/alexandria-feedback.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 4237,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;src/alexandria-output.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 3715,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;src/alexandria.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 10749,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;src/core-http-error.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 3767,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;src/developer.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 4913,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;src/enrich.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 71454,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;src/gov.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 5928,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;src/headers.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 379,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;src/index.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 5209,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;src/integration.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1251,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;src/keyless-signup-link.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1970,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;src/mcp/runtime.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 46022,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;src/mcp/sse.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 3414,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;src/mcp/www-authenticate.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 463,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;src/monitor.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 21674,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;src/origin.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 9828,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;src/recovery.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 9713,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;src/research.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 18667,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;src/search-budget.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 5832,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;src/server.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 138796,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;src/service/auth.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 24011,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;src/service/index.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 2699,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;src/service/introspection-cache.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 3109,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;src/service/profiles.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 9542,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;src/service/search-surface.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 10477,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;src/service/session-credential.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 5842,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;src/service/session.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 516,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;src/service/tool-guard.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 2222,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;src/tasks.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 16137,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;src/tool-arguments.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 4818,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;src/tool-helpers.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 15842,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;src/tool-output.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 22701,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;src/usage.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 7721,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/agent-metadata-policy.test.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 6412,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/alexandria-feedback-tokens.test.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 3244,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/build-bundle.test.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 2217,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/contract-snapshot.test.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 16128,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/contract-snapshots/hosted-account.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 6107,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/contract-snapshots/hosted-full.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 8574,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/contract-snapshots/hosted-search-companion.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 4934,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/contract-snapshots/hosted-search-primary.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 5164,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/contract-snapshots/http-self-hosted.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 5506,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/contract-snapshots/stdio-api-key.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 6537,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/contract-snapshots/stdio-keyless.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 3505,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/contract-snapshots/stdio-self-hosted.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 3331,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/contract-snapshots/tool-definitions.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 349545,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/embed-package.test.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 4756,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/fixtures/embed/embed-types.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 3222,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/fixtures/embed/embed.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1700,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/fixtures/embed/package.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 83,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/fixtures/embed/tsconfig.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 237,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/fixtures/modern-stdio.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 341,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/gemini-extension.test.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 904,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/helpers/alexandria-metadata.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 2209,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/helpers/description-budget.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 207,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/helpers/exchange-api.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 9856,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/helpers/exchange-mcp.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 6922,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/http-auth.test.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 8293,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/http-host-validation.test.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 10327,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/http-transport-parity.test.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 5578,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/integration-tag.test.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 4029,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/introspection-cache.test.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 7156,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/keyless-signup-link.test.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 2540,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/mcp-alexandria-auth.test.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 4278,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/mcp-alexandria-discovery.test.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 5167,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/mcp-alexandria-feedback-hints.test.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 4175,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/mcp-alexandria-feedback-tokens.test.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 5549,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/mcp-alexandria-scrape.test.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 6836,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/mcp-alexandria-search.test.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 7195,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/mcp-alexandria-terms.test.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 6956,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/mcp-argument-shapes.test.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 10932,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/mcp-crawl-polling.test.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 4797,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/mcp-description-budget.test.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1775,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/mcp-enrich-tools.test.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 42270,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/mcp-error-output-schema.test.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 19805,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/mcp-input-schema.test.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 4634,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/mcp-interact-output.test.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 4382,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/mcp-read-only-scrape.test.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 7671,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/mcp-research-papers.test.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 3159,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/mcp-scrape-images.test.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1536,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/mcp-search-byte-budget.test.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 7229,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/mcp-search-profile.test.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 54623,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/mcp-smoke.test.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 162199,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/mcp-tasks.test.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 29050,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/mcp-tool-annotations.test.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 2258,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/origin-modern.test.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 5136,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/origin.test.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 12017,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/protocol-conformance.test.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 13315,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/readme-security.test.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 535,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/server-hooks.test.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 24087,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/service-boundary.test.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 2844,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/www-authenticate.test.mjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 764,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tsconfig.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 329,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tsup.config.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 621,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    }
+  ],
+  &quot;unsupportedSourceFiles&quot;: [
+    &quot;.github/actions/release-summary/summary.sh&quot;,
+    &quot;.github/actions/supersede-waiting-runs/supersede.sh&quot;,
+    &quot;Dockerfile&quot;
+  ],
+  &quot;excludedFiles&quot;: [
+    {
+      &quot;path&quot;: &quot;.git&quot;,
+      &quot;reason&quot;: &quot;ignored-directory&quot;
+    },
+    {
+      &quot;path&quot;: &quot;.dockerignore&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;.github/actions/release-summary/summary.sh&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;.github/actions/supersede-waiting-runs/supersede.sh&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;.gitignore&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;.prettierrc&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;CHANGELOG.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;Dockerfile&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;LICENSE&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;README.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;VERSIONING.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;docs/search-profile.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;img/fire.png&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;img/firecrawl-logo.png&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;img/firecrawl-wordmark.png&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;reports/alexandria-mcp-validation.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    }
+  ],
+  &quot;readErrors&quot;: [],
+  &quot;truncation&quot;: [],
+  &quot;limits&quot;: {
+    &quot;maxFiles&quot;: 4000,
+    &quot;maxDepth&quot;: 12,
+    &quot;maxFileBytes&quot;: 1048576
+  }
+}</pre></details>
+<h2>Fix first (7 critical/high)</h2>
+<table class="data"><thead><tr><th>Severity</th><th>Rule</th><th>Finding</th><th>Remediation</th></tr></thead><tbody><tr><td><strong style="color:var(--bad)">CRITICAL</strong></td><td><code>AT-SEC-002</code> (LLM02)</td><td>Hardcoded Credential or API Secret<br><code class="muted">tests/mcp-search-profile.test.mjs:131</code><br><span class="muted">Evidence: </span><code>apiKeyFromIntrospection = 'fc-from-introspection',</code></td><td>Move credentials to secure environment variables or a key vault. Never commit API keys.</td></tr><tr><td><strong style="color:var(--bad)">CRITICAL</strong></td><td><code>AT-SEC-002</code> (LLM02)</td><td>Hardcoded Credential or API Secret<br><code class="muted">tests/mcp-smoke.test.mjs:698</code><br><span class="muted">Evidence: </span><code>apiKeyFromIntrospection = 'fc-from-introspection',</code></td><td>Move credentials to secure environment variables or a key vault. Never commit API keys.</td></tr><tr><td><strong style="color:var(--bad)">CRITICAL</strong></td><td><code>AT-SEC-002</code> (LLM02)</td><td>Hardcoded Credential or API Secret<br><code class="muted">tests/mcp-smoke.test.mjs:3412</code><br><span class="muted">Evidence: </span><code>const resolvedApiKey = 'fc-resolved-api-key-value';</code></td><td>Move credentials to secure environment variables or a key vault. Never commit API keys.</td></tr><tr><td><strong style="color:var(--orange)">HIGH</strong></td><td><code>AT-SEC-006</code> (LLM06)</td><td>Unfiltered SSRF / Arbitrary Network Egress<br><code class="muted">src/monitor.ts:85</code><br><span class="muted">Evidence: </span><code>const response = await fetch(url, {</code></td><td>Define an explicit egress domain allowlist and block private IP ranges (127.0.0.1, 10.0.0.0/8, 169.254.169.254).</td></tr><tr><td><strong style="color:var(--orange)">HIGH</strong></td><td><code>AT-SEC-006</code> (LLM06)</td><td>Unfiltered SSRF / Arbitrary Network Egress<br><code class="muted">tests/mcp-search-profile.test.mjs:81</code><br><span class="muted">Evidence: </span><code>const response = await fetch(url);</code></td><td>Define an explicit egress domain allowlist and block private IP ranges (127.0.0.1, 10.0.0.0/8, 169.254.169.254).</td></tr><tr><td><strong style="color:var(--orange)">HIGH</strong></td><td><code>AT-SEC-006</code> (LLM06)</td><td>Unfiltered SSRF / Arbitrary Network Egress<br><code class="muted">tests/mcp-smoke.test.mjs:43</code><br><span class="muted">Evidence: </span><code>const response = await fetch(url);</code></td><td>Define an explicit egress domain allowlist and block private IP ranges (127.0.0.1, 10.0.0.0/8, 169.254.169.254).</td></tr><tr><td><strong style="color:var(--orange)">HIGH</strong></td><td><code>AT-SEC-006</code> (LLM06)</td><td>Unfiltered SSRF / Arbitrary Network Egress<br><code class="muted">tests/server-hooks.test.mjs:578</code><br><span class="muted">Evidence: </span><code>return realFetch(input, init);</code></td><td>Define an explicit egress domain allowlist and block private IP ranges (127.0.0.1, 10.0.0.0/8, 169.254.169.254).</td></tr></tbody></table>
+<h2>Permissions</h2>
+<p>Scope: <strong>excessive</strong> · Shell: enabled · Network egress: yes · File deletion: enabled · Human approval: operator-confirmation-gate</p>
+<h2>Provenance</h2>
+<p>License: MIT · Lockfile: yes · Security policy: no · Signals: present (documentary, not a safety verdict)</p>
+<div class="callout"><p><strong>Independently scanned by the OpenTrustBench registry</strong> (not self-reported by the project). Static analysis only — no code executed, findings need human triage, counts may include test/example code. <strong>Static snapshot; re-scan before relying on it:</strong> <code>npx @opentrustbench/cli scan https://github.com/mendableai/firecrawl-mcp-server</code>. Scores move with every upstream commit; pages refresh weekly. <a href="../methodology.html">How scoring works</a>.</p></div>
+</div></main>
+<footer><div class="wrap"><div class="foot-base" style="border-top:none;padding-top:0"><span>© 2026 OpenTrustBench · Apache-2.0 · Built by <a href="https://eulogik.com">Eulogik</a></span><span><a href="../">Home</a> · <a href="./">Registry</a></span></div></div></footer>
+<script src="../assets/site.js" defer></script>
+</body></html>

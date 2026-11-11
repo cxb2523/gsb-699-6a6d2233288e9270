@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ClickHouse__mcp-clickhouse — Trust Card (Grade U) · OpenTrustBench</title>
+<meta name="description" content="Static security scan of ClickHouse__mcp-clickhouse: grade U (Ungraded — insufficient static coverage), 2 findings, scope moderate. Not ranked: insufficient static coverage.">
+<link rel="canonical" href="https://opentrustbench.com/r/clickhouse-mcp-clickhouse.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ClickHouse__mcp-clickhouse — OpenTrustBench Grade U">
+<meta property="og:url" content="https://opentrustbench.com/r/clickhouse-mcp-clickhouse.html">
+<meta property="og:image" content="https://opentrustbench.com/og-image.png">
+  <meta property="og:image:width" content="1280">
+  <meta property="og:image:height" content="640">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://opentrustbench.com/#org","name":"OpenTrustBench","url":"https://opentrustbench.com/","sameAs":["https://github.com/eulogik/OpenTrustBench"]},{"@type":"Article","headline":"ClickHouse__mcp-clickhouse — OpenTrustBench Grade U (Ungraded — insufficient static coverage)","description":"Static security scan of ClickHouse__mcp-clickhouse: 2 findings (1 critical), permission scope moderate.","datePublished":"2026-11-09","dateModified":"2026-11-09","author":{"@id":"https://opentrustbench.com/#org"},"publisher":{"@id":"https://opentrustbench.com/#org"},"mainEntityOfPage":"https://opentrustbench.com/r/clickhouse-mcp-clickhouse.html"}]}</script>
+<link rel="preload" href="../assets/fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-scan="2026-11-09">
+<a class="skip" href="#main">Skip to content</a>
+<nav class="nav" aria-label="Main"><div class="nav-inner">
+<a class="brand" href="../"><span class="brand-mark">O</span>OpenTrustBench</a>
+<div class="nav-links" id="nav-links"><a href="../#how">How it works</a><a href="./">Registry</a><a href="../methodology.html">Methodology</a></div>
+<div class="nav-cta"><a class="btn btn-ghost btn-sm" href="https://github.com/eulogik/OpenTrustBench">GitHub</a><button class="theme-toggle" type="button" aria-label="Toggle theme"><svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button><button class="burger" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">☰</button></div>
+</div></nav>
+<main id="main"><div class="report-wrap">
+<p class="muted small"><a href="./">← All scanned servers</a></p>
+<p id="stale" hidden class="callout warn">⚠️ This snapshot is over 30 days old — treat the grade as stale until the next refresh. Re-scan locally to verify.</p>
+<script>try{var d=new Date(document.body.dataset.scan);if((Date.now()-d.getTime())/864e5>30){document.getElementById('stale').hidden=false;}}catch(_){}</script>
+<p class="eyebrow">Trust Card · Static snapshot</p>
+<h1>ClickHouse__mcp-clickhouse <span class="grade ">U</span></h1>
+<p class="lede"><strong style="color:var(--text)">Ungraded — insufficient static coverage</strong> · 2 findings (1 critical) · scope moderate · Not ranked: insufficient static coverage.</p>
+<p class="muted">Scanned 2026-11-09 · engine v0.1.3 (8 regex rules, OWASP-mapped) · upstream ClickHouse/mcp-clickhouse @ a90a8bc (2026-11-04)</p>
+<h2>Score breakdown</h2>
+<p>No numeric score or breakdown: insufficient static coverage. Findings remain actionable; absence of findings is not evidence of safety.</p>
+<p class="muted">Insufficient static coverage: Unsupported source present. Findings remain actionable; absence of findings is not evidence of safety.</p>
+<h2>Coverage: limited</h2>
+<p>Static-heuristic scope: 53 analyzed / 66 discovered files; 1 unsupported source files; 14 excluded; 0 read errors; 0 truncations. This is not a semantic coverage percentage or proof of safety.</p>
+<ul><li>Unsupported source present</li><li>Coverage describes the files read and regex rules applied, not semantic, runtime, or dependency coverage.</li><li>Supported code is JavaScript, TypeScript, and Python; JSON/YAML receive only the credential rule.</li><li>Skill instructions and other prose are not code-analyzed; declared controls are not verified enforcement.</li><li>Ignored directories, declarations, and non-implementation assets are outside rule scope.</li></ul>
+<details><summary>File coverage, applied rules and scan limits</summary><pre>{
+  &quot;mode&quot;: &quot;static-heuristic&quot;,
+  &quot;status&quot;: &quot;limited&quot;,
+  &quot;reasons&quot;: [
+    &quot;Unsupported source present&quot;
+  ],
+  &quot;limitations&quot;: [
+    &quot;Coverage describes the files read and regex rules applied, not semantic, runtime, or dependency coverage.&quot;,
+    &quot;Supported code is JavaScript, TypeScript, and Python; JSON/YAML receive only the credential rule.&quot;,
+    &quot;Skill instructions and other prose are not code-analyzed; declared controls are not verified enforcement.&quot;,
+    &quot;Ignored directories, declarations, and non-implementation assets are outside rule scope.&quot;
+  ],
+  &quot;discoveredFiles&quot;: 66,
+  &quot;analyzedFiles&quot;: [
+    {
+      &quot;path&quot;: &quot;.github/workflows/ci.yaml&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 3556,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;.github/workflows/docs_drift_check.yml&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 1945,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;.github/workflows/publish-mcp.yml&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 2318,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;.github/workflows/publish.yml&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 409,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;.github/workflows/release-docker.yml&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 1652,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;example_middleware.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 2854,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;fastmcp.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 296,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;mcp_clickhouse/__init__.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 797,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;mcp_clickhouse/auth.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 16675,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;mcp_clickhouse/chdb_backend.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 6429,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;mcp_clickhouse/chdb_prompt.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 4924,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;mcp_clickhouse/clients.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 29590,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;mcp_clickhouse/executors.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 839,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;mcp_clickhouse/health.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 7775,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;mcp_clickhouse/http_security.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 5428,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;mcp_clickhouse/main.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 873,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;mcp_clickhouse/mcp_env.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 24334,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;mcp_clickhouse/mcp_middleware_hook.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 947,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;mcp_clickhouse/mcp_server.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 6651,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;mcp_clickhouse/metadata.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 20432,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;mcp_clickhouse/queries.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 17983,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;mcp_clickhouse/serialization.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 2569,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;mcp_clickhouse/skills_advisor.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 543,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;mcp_clickhouse/transport.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 7969,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;server.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 7665,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;test-services/docker-compose.yaml&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 324,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/conftest.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 311,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/test_auth_config.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 38426,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/test_chdb_tool.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 3927,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/test_client_cache.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 22846,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/test_config_interface.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 4888,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/test_connection_errors.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 6177,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/test_context_config_override.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 42548,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/test_destructive_ops.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 8054,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/test_grants_advisory.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 5953,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/test_health_cache.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 7874,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/test_http_security.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 10659,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/test_http_security_boundary.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 31918,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/test_mcp_server.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 14881,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/test_middleware.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 5018,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/test_optional_chdb.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 14169,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/test_pagination.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 10887,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/test_pagination_validation.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 17262,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/test_protocol_compat.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 16176,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/test_query_cancellation.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 23382,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/test_query_parameters.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 15413,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/test_serialization.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 10964,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/test_skills_advisor.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1058,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/test_startup_contract.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 46072,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/test_tls_config.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 7012,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/test_tool.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 18028,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/test_tool_descriptions.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1172,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tests/test_trusted_proxy.py&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 10895,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    }
+  ],
+  &quot;unsupportedSourceFiles&quot;: [
+    &quot;Dockerfile&quot;
+  ],
+  &quot;excludedFiles&quot;: [
+    {
+      &quot;path&quot;: &quot;.git&quot;,
+      &quot;reason&quot;: &quot;ignored-directory&quot;
+    },
+    {
+      &quot;path&quot;: &quot;.claude/agents/docs-drift-reviewer.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;.dockerignore&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;.editorconfig&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;.gitignore&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;.python-version&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;AGENTS.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;CHANGELOG.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;CLAUDE.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;Dockerfile&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;LICENSE&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;README.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;pyproject.toml&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;uv.lock&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    }
+  ],
+  &quot;readErrors&quot;: [],
+  &quot;truncation&quot;: [],
+  &quot;limits&quot;: {
+    &quot;maxFiles&quot;: 4000,
+    &quot;maxDepth&quot;: 12,
+    &quot;maxFileBytes&quot;: 1048576
+  }
+}</pre></details>
+<h2>Fix first (2 critical/high)</h2>
+<table class="data"><thead><tr><th>Severity</th><th>Rule</th><th>Finding</th><th>Remediation</th></tr></thead><tbody><tr><td><strong style="color:var(--bad)">CRITICAL</strong></td><td><code>AT-SEC-002</code> (LLM02)</td><td>Hardcoded Credential or API Secret<br><code class="muted">tests/test_auth_config.py:860</code><br><span class="muted">Evidence: </span><code>secret = &quot;constructor-secret-value&quot;</code></td><td>Move credentials to secure environment variables or a key vault. Never commit API keys.</td></tr><tr><td><strong style="color:var(--orange)">HIGH</strong></td><td><code>AT-SEC-005</code> (ASI02)</td><td>Unrestricted Recursive File Deletion / Modification<br><code class="muted">tests/test_chdb_tool.py:58</code><br><span class="muted">Evidence: </span><code>self.addCleanup(lambda: os.path.exists(temp_path) and os.unlink(temp_path))</code></td><td>Enforce strict jail/root directories and require explicit human-in-the-loop confirmation before file deletions.</td></tr></tbody></table>
+<h2>Permissions</h2>
+<p>Scope: <strong>moderate</strong> · Shell: disabled · Network egress: no · File deletion: enabled · Human approval: none</p>
+<h2>Provenance</h2>
+<p>License: none detected · Lockfile: no · Security policy: no · Signals: unverified origin</p>
+<div class="callout"><p><strong>Independently scanned by the OpenTrustBench registry</strong> (not self-reported by the project). Static analysis only — no code executed, findings need human triage, counts may include test/example code. <strong>Static snapshot; re-scan before relying on it:</strong> <code>npx @opentrustbench/cli scan https://github.com/ClickHouse/mcp-clickhouse</code>. Scores move with every upstream commit; pages refresh weekly. <a href="../methodology.html">How scoring works</a>.</p></div>
+</div></main>
+<footer><div class="wrap"><div class="foot-base" style="border-top:none;padding-top:0"><span>© 2026 OpenTrustBench · Apache-2.0 · Built by <a href="https://eulogik.com">Eulogik</a></span><span><a href="../">Home</a> · <a href="./">Registry</a></span></div></div></footer>
+<script src="../assets/site.js" defer></script>
+</body></html>

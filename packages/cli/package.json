@@ -1,0 +1,59 @@
+{
+  "name": "@opentrustbench/cli",
+  "version": "0.1.3",
+  "type": "module",
+  "description": "Trust & security verification for AI agents and MCP servers \u2014 scan, grade, and share a verifiable Trust Card",
+  "bin": {
+    "opentrustbench": "./dist/index.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eulogik/OpenTrustBench.git",
+    "directory": "packages/cli"
+  },
+  "homepage": "https://www.opentrustbench.com",
+  "bugs": {
+    "url": "https://github.com/eulogik/OpenTrustBench/issues"
+  },
+  "keywords": [
+    "ai-agent",
+    "mcp",
+    "model-context-protocol",
+    "security",
+    "trust",
+    "owasp",
+    "owasp-agentic",
+    "owasp-llm",
+    "compliance",
+    "eu-ai-act",
+    "sarif",
+    "trust-card",
+    "agent-security",
+    "mcp-server",
+    "security-audit",
+    "static-analysis",
+    "vulnerability-scanner",
+    "ai-security",
+    "llm-security"
+  ],
+  "author": {"name": "Eulogik", "url": "https://eulogik.com"},
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@opentrustbench/core": "0.1.3"
+  }
+}

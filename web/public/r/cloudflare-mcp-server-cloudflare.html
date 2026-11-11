@@ -1,0 +1,5036 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>cloudflare__mcp-server-cloudflare — Trust Card (Grade U) · OpenTrustBench</title>
+<meta name="description" content="Static security scan of cloudflare__mcp-server-cloudflare: grade U (Ungraded — insufficient static coverage), 19 findings, scope excessive. Not ranked: insufficient static coverage.">
+<link rel="canonical" href="https://opentrustbench.com/r/cloudflare-mcp-server-cloudflare.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="cloudflare__mcp-server-cloudflare — OpenTrustBench Grade U">
+<meta property="og:url" content="https://opentrustbench.com/r/cloudflare-mcp-server-cloudflare.html">
+<meta property="og:image" content="https://opentrustbench.com/og-image.png">
+  <meta property="og:image:width" content="1280">
+  <meta property="og:image:height" content="640">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://opentrustbench.com/#org","name":"OpenTrustBench","url":"https://opentrustbench.com/","sameAs":["https://github.com/eulogik/OpenTrustBench"]},{"@type":"Article","headline":"cloudflare__mcp-server-cloudflare — OpenTrustBench Grade U (Ungraded — insufficient static coverage)","description":"Static security scan of cloudflare__mcp-server-cloudflare: 19 findings (3 critical), permission scope excessive.","datePublished":"2026-11-09","dateModified":"2026-11-09","author":{"@id":"https://opentrustbench.com/#org"},"publisher":{"@id":"https://opentrustbench.com/#org"},"mainEntityOfPage":"https://opentrustbench.com/r/cloudflare-mcp-server-cloudflare.html"}]}</script>
+<link rel="preload" href="../assets/fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-scan="2026-11-09">
+<a class="skip" href="#main">Skip to content</a>
+<nav class="nav" aria-label="Main"><div class="nav-inner">
+<a class="brand" href="../"><span class="brand-mark">O</span>OpenTrustBench</a>
+<div class="nav-links" id="nav-links"><a href="../#how">How it works</a><a href="./">Registry</a><a href="../methodology.html">Methodology</a></div>
+<div class="nav-cta"><a class="btn btn-ghost btn-sm" href="https://github.com/eulogik/OpenTrustBench">GitHub</a><button class="theme-toggle" type="button" aria-label="Toggle theme"><svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button><button class="burger" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">☰</button></div>
+</div></nav>
+<main id="main"><div class="report-wrap">
+<p class="muted small"><a href="./">← All scanned servers</a></p>
+<p id="stale" hidden class="callout warn">⚠️ This snapshot is over 30 days old — treat the grade as stale until the next refresh. Re-scan locally to verify.</p>
+<script>try{var d=new Date(document.body.dataset.scan);if((Date.now()-d.getTime())/864e5>30){document.getElementById('stale').hidden=false;}}catch(_){}</script>
+<p class="eyebrow">Trust Card · Static snapshot</p>
+<h1>cloudflare__mcp-server-cloudflare <span class="grade ">U</span></h1>
+<p class="lede"><strong style="color:var(--text)">Ungraded — insufficient static coverage</strong> · 19 findings (3 critical) · scope excessive · Not ranked: insufficient static coverage.</p>
+<p class="muted">Scanned 2026-11-09 · engine v0.1.3 (8 regex rules, OWASP-mapped) · upstream cloudflare/mcp-server-cloudflare @ a21972e (2026-10-22)</p>
+<h2>Score breakdown</h2>
+<p>No numeric score or breakdown: insufficient static coverage. Findings remain actionable; absence of findings is not evidence of safety.</p>
+<p class="muted">Insufficient static coverage: Unsupported source present. Findings remain actionable; absence of findings is not evidence of safety.</p>
+<h2>Coverage: limited</h2>
+<p>Static-heuristic scope: 294 analyzed / 468 discovered files; 42 unsupported source files; 175 excluded; 0 read errors; 0 truncations. This is not a semantic coverage percentage or proof of safety.</p>
+<ul><li>Unsupported source present</li><li>Coverage describes the files read and regex rules applied, not semantic, runtime, or dependency coverage.</li><li>Supported code is JavaScript, TypeScript, and Python; JSON/YAML receive only the credential rule.</li><li>Skill instructions and other prose are not code-analyzed; declared controls are not verified enforcement.</li><li>Ignored directories, declarations, and non-implementation assets are outside rule scope.</li></ul>
+<details><summary>File coverage, applied rules and scan limits</summary><pre>{
+  &quot;mode&quot;: &quot;static-heuristic&quot;,
+  &quot;status&quot;: &quot;limited&quot;,
+  &quot;reasons&quot;: [
+    &quot;Unsupported source present&quot;
+  ],
+  &quot;limitations&quot;: [
+    &quot;Coverage describes the files read and regex rules applied, not semantic, runtime, or dependency coverage.&quot;,
+    &quot;Supported code is JavaScript, TypeScript, and Python; JSON/YAML receive only the credential rule.&quot;,
+    &quot;Skill instructions and other prose are not code-analyzed; declared controls are not verified enforcement.&quot;,
+    &quot;Ignored directories, declarations, and non-implementation assets are outside rule scope.&quot;
+  ],
+  &quot;discoveredFiles&quot;: 468,
+  &quot;analyzedFiles&quot;: [
+    {
+      &quot;path&quot;: &quot;.changeset/config.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 325,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;.eslintrc.cjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 223,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;.github/actions/setup/action.yml&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 636,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;.github/workflows/branches.yml&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 809,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;.github/workflows/main.yml&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 885,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;.github/workflows/release.yml&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 2056,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;.github/workflows/semgrep.yml&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 828,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;.prettierrc.cjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1069,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;.syncpackrc.cjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 2141,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;.vscode/extensions.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 471,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;.vscode/launch.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 953,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;.vscode/settings.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 717,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;.vscode/tasks.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 350,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/ai-gateway/.eslintrc.cjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 127,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/ai-gateway/package.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 679,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/ai-gateway/src/ai-gateway.app.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1129,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/ai-gateway/src/ai-gateway.context.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 383,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/ai-gateway/src/ai-gateway.spec.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 2268,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/ai-gateway/src/auth-integration.spec.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 7727,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/ai-gateway/src/tools/ai-gateway.tools.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 4660,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/ai-gateway/src/types.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1023,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/ai-gateway/tsconfig.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 118,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/ai-gateway/vitest.config.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 623,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/auditlogs/.eslintrc.cjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 127,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/auditlogs/package.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 598,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/auditlogs/src/auditlogs.app.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1422,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/auditlogs/src/auditlogs.context.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 416,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/auditlogs/src/auditlogs.spec.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 4094,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/auditlogs/src/tools/auditlogs.tools.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 10481,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/auditlogs/tsconfig.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 147,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/auditlogs/vitest.config.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 682,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/autorag/.eslintrc.cjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 127,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/autorag/package.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 599,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/autorag/src/autorag.app.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1828,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/autorag/src/autorag.context.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 383,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/autorag/src/autorag.spec.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 465,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/autorag/src/tools/autorag.tools.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 3972,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/autorag/src/types.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 179,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/autorag/tsconfig.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 118,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/autorag/vitest.config.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 620,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/browser-rendering/.eslintrc.cjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 127,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/browser-rendering/package.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 643,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/browser-rendering/src/browser.app.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 752,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/browser-rendering/src/browser.context.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 383,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/browser-rendering/src/browser.spec.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 726,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/browser-rendering/src/browser.tools.spec.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 6211,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/browser-rendering/src/tools/browser.tools.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 15501,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/browser-rendering/tsconfig.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 118,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/browser-rendering/vitest.config.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 680,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/cloudflare-blog/.eslintrc.cjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 127,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/cloudflare-blog/package.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 608,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/cloudflare-blog/src/cloudflare-blog.app.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 430,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/cloudflare-blog/src/cloudflare-blog.context.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 385,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/cloudflare-blog/src/cloudflare-blog.spec.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 445,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/cloudflare-blog/src/tools/blog.tools.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 7178,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/cloudflare-blog/src/types/blog.types.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1076,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/cloudflare-blog/tsconfig.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 102,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/cloudflare-blog/vitest.config.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 368,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/cloudflare-one-casb/.eslintrc.cjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 127,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/cloudflare-one-casb/package.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 630,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/cloudflare-one-casb/src/api/cf1-integration.api.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 5509,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/cloudflare-one-casb/src/cf1-casb.app.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 768,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/cloudflare-one-casb/src/cf1-casb.context.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 391,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/cloudflare-one-casb/src/cf1-casb.spec.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 730,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/cloudflare-one-casb/src/tools/integrations.tools.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 6595,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/cloudflare-one-casb/src/types/cf1-integrations.types.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 3056,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/cloudflare-one-casb/tsconfig.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 118,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/cloudflare-one-casb/vitest.config.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 621,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/demo-day/.eslintrc.cjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 190,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/demo-day/frontend/script.js&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 19232,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/demo-day/package.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 560,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/demo-day/src/demo-day.app.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1470,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/demo-day/src/demo-day.spec.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 428,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/demo-day/tsconfig.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 247,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/demo-day/vitest.config.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 281,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/demo-day/wrangler.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 994,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/dex-analysis/.eslintrc.cjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 127,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/dex-analysis/package.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 671,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/dex-analysis/src/dex-analysis.app.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 832,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/dex-analysis/src/dex-analysis.context.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 499,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/dex-analysis/src/dex-analysis.spec.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 761,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/dex-analysis/src/tools/dex-analysis.tools.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 21193,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/dex-analysis/src/warp_diag_reader.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 3242,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/dex-analysis/tsconfig.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 118,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/dex-analysis/vitest.config.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 625,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/dns-analytics/.eslintrc.cjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 127,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/dns-analytics/package.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 608,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/dns-analytics/src/dns-analytics.app.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1510,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/dns-analytics/src/dns-analytics.context.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 491,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/dns-analytics/src/dns-analytics.spec.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 2258,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/dns-analytics/src/tools/dex-analytics.tools.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 3459,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/dns-analytics/tsconfig.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 149,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/dns-analytics/vitest.config.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 570,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/docs-ai-search/.eslintrc.cjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 127,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/docs-ai-search/package.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 565,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/docs-ai-search/src/docs-ai-search.app.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 755,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/docs-ai-search/src/docs-ai-search.context.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 312,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/docs-ai-search/src/docs-ai-search.spec.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 508,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/docs-ai-search/tsconfig.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 102,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/docs-ai-search/vitest.config.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 627,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/graphql/.eslintrc.cjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 127,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/graphql/package.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 631,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/graphql/src/graphql.app.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1359,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/graphql/src/graphql.context.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 491,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/graphql/src/graphql.spec.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 9632,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/graphql/src/tools/graphql.tools.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 34819,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/graphql/tsconfig.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 118,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/graphql/vitest.config.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 679,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/logpush/.eslintrc.cjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 127,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/logpush/package.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 577,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/logpush/src/logpush.app.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1261,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/logpush/src/logpush.context.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 383,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/logpush/src/logpush.spec.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 2109,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/logpush/src/tools/logpush.tools.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 3901,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/logpush/tsconfig.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 118,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/logpush/vitest.config.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 620,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/radar/.eslintrc.cjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 127,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/radar/package.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 622,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/radar/src/radar.app.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1952,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/radar/src/radar.context.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 5024,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/radar/src/radar.spec.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 468,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/radar/src/tools/radar.tools.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 79453,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/radar/src/tools/url-scanner.tools.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 7855,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/radar/src/types/radar.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 34299,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/radar/src/types/url-scanner.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1169,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/radar/src/utils.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 873,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/radar/tsconfig.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 118,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/radar/vitest.config.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 618,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/sandbox-container/.eslintrc.cjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 127,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/sandbox-container/evals/exec.eval.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1516,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/sandbox-container/evals/files.eval.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 2681,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/sandbox-container/evals/initialize.eval.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 775,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/sandbox-container/evals/utils.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 512,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/sandbox-container/package.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 1354,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/sandbox-container/server/container-tools.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 4508,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/sandbox-container/server/containerManager.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1947,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/sandbox-container/server/metrics.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 400,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/sandbox-container/server/prompts.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 2902,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/sandbox-container/server/sandbox.server.app.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 951,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/sandbox-container/server/sandbox.server.context.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 748,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/sandbox-container/server/sandbox.server.spec.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 851,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/sandbox-container/server/sandboxTemplate.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1597,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/sandbox-container/server/userContainer.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 15537,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/sandbox-container/server/utils.spec.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 971,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/sandbox-container/server/utils.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 690,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/sandbox-container/shared/schema.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 553,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/sandbox-container/tsconfig.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 146,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/sandbox-container/vitest.config.evals.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 361,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/sandbox-container/vitest.config.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1325,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/stack-mcp/.eslintrc.cjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 127,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/stack-mcp/package.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 602,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/stack-mcp/src/stack-mcp.app.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 949,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/stack-mcp/src/stack-mcp.context.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1762,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/stack-mcp/src/stack-mcp.spec.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 482,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/stack-mcp/src/tools/stack.tools.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 5136,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/stack-mcp/src/types/stack.types.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 3503,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/stack-mcp/tsconfig.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 102,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/stack-mcp/vitest.config.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 362,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-bindings/.eslintrc.cjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 127,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-bindings/evals/hyperdrive.eval.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1715,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-bindings/evals/kv_namespaces.eval.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 4305,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-bindings/evals/utils.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 512,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-bindings/package.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 1435,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-bindings/src/bindings.app.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1908,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-bindings/src/bindings.context.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 587,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-bindings/src/bindings.spec.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 2337,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-bindings/src/tools/d1.tools.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 5553,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-bindings/src/tools/hyperdrive.tools.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 7581,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-bindings/src/tools/kv_namespace.tools.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 6483,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-bindings/src/tools/r2_bucket.tools.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 4411,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-bindings/src/types/d1.types.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 549,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-bindings/src/types/hyperdrive.types.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 3550,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-bindings/src/types/kv_namespace.types.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 2379,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-bindings/src/types/r2_bucket.types.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 14774,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-bindings/tsconfig.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 108,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-bindings/vitest.config.evals.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 361,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-bindings/vitest.config.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 621,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-builds/.eslintrc.cjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 127,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-builds/package.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 633,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-builds/src/api/workers-builds.api.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1740,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-builds/src/tools/workers-builds.tools.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 5099,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-builds/src/types/workers-builds.types.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 2906,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-builds/src/workers-builds.app.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 2349,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-builds/src/workers-builds.context.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 491,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-builds/src/workers-builds.spec.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 5073,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-builds/tsconfig.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 118,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-builds/vite.config.mts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 178,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-builds/vitest.config.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 627,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-observability/.eslintrc.cjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 127,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-observability/package.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 659,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-observability/src/api/workers-observability.api.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 2500,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-observability/src/tools/workers-observability.tools.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 8488,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-observability/src/types/workers-logs.types.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 14909,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-observability/src/workers-logs.types.spec.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1816,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-observability/src/workers-observability.app.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 2231,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-observability/src/workers-observability.context.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 552,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-observability/src/workers-observability.spec.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 2425,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-observability/tsconfig.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 118,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-observability/vitest.config.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 634,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;package.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 1575,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/eslint-config/default.cjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1733,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/eslint-config/package.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 622,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/eval-tools/package.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 601,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/eval-tools/src/runTask.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 2391,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/eval-tools/src/scorers.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 2529,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/eval-tools/src/test-models.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1770,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/eval-tools/tsconfig.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 158,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/eval-tools/wrangler.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 229,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/.eslintrc.cjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 127,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/package.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 965,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/__mocks__/cloudflare.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 492,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/account-manager.spec.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 4290,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/account-manager.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 4967,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/account-tool.spec.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 3255,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/account-tool.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1992,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/api-token-mode.spec.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 13132,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/api-token-mode.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 6368,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/auth-props.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 953,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/cloudflare-api.spec.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 4349,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/cloudflare-api.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 2038,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/cloudflare-auth.spec.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 9091,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/cloudflare-auth.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 6103,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/cloudflare-oauth-flow.spec.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 11842,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/cloudflare-oauth-handler.spec.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 20669,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/cloudflare-oauth-handler.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 22943,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/config.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 273,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/durable-kv-store.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 3338,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/format.spec.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 3584,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/format.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 908,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/index.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 360,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/mcp-app.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 3775,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/mcp-error.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1944,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/oauth-router.spec.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 5988,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/oauth-router.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 3827,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/pagination.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 282,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/poll.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 834,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/registration-context.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 5365,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/request-context.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1056,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/scopes.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 247,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/sentry.spec.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 3883,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/sentry.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 4228,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/server.spec.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 18385,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/server.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 8806,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/shared-prompts/docs-ai-search.prompts.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 832,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/shared-tools/docs-ai-search.tools.spec.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 4261,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/shared-tools/docs-ai-search.tools.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 6024,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/shared-tools/worker.tools.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 4617,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/shared-tools/workers.api.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1634,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/shared-tools/workers.types.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 442,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/shared-tools/zone.api.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1182,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/shared-tools/zone.tools.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 3044,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/test/msw-server.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 340,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/test/msw-setup.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 376,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/test/stateless-app.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 8119,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/transport-migration.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1690,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/user-agent.spec.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 2356,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/user-agent.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1625,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/utils.spec.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1108,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/utils.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1042,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/v4-api.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1579,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/workers-oauth-utils.spec.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 5596,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/src/workers-oauth-utils.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 11268,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/tests/utils/cloudflare-mock.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 463,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/tsconfig.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 210,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/vitest.config.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 942,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-observability/package.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 428,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-observability/src/analytics-engine.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 4369,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-observability/src/index.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 61,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-observability/src/metrics.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1964,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-observability/tsconfig.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 131,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/tools/.eslintrc.cjs&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 127,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/tools/package.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 453,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/tools/src/bin/runx.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 583,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/tools/src/changesets.spec.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 2411,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/tools/src/changesets.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1561,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/tools/src/cmd/deploy-published-packages.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 935,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/tools/src/proc.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 177,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/tools/src/test/fixtures/changesets/invalid-json/published-packages.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 23,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/tools/src/test/fixtures/changesets/invalid-schema/published-packages.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 50,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/tools/src/test/fixtures/changesets/valid/published-packages.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 105,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/tools/src/test/setup.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 260,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/tools/src/tsconfig.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 1893,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/tools/tsconfig.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 125,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/tools/vitest.config.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 165,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/typescript-config/package.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 155,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/typescript-config/tools.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 586,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/typescript-config/workers-lib.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 316,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;packages/typescript-config/workers.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 756,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;pnpm-lock.yaml&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 329476,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;pnpm-workspace.yaml&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 434,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;server.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 1907,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;tsconfig.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 53,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;turbo.json&quot;,
+      &quot;scope&quot;: &quot;data&quot;,
+      &quot;bytes&quot;: 891,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-002&quot;
+      ]
+    },
+    {
+      &quot;path&quot;: &quot;vitest.config.ts&quot;,
+      &quot;scope&quot;: &quot;code&quot;,
+      &quot;bytes&quot;: 333,
+      &quot;nonEmpty&quot;: true,
+      &quot;ruleIds&quot;: [
+        &quot;AT-SEC-001&quot;,
+        &quot;AT-SEC-002&quot;,
+        &quot;AT-SEC-003&quot;,
+        &quot;AT-SEC-004&quot;,
+        &quot;AT-SEC-005&quot;,
+        &quot;AT-SEC-006&quot;,
+        &quot;AT-SEC-007&quot;,
+        &quot;AT-COMP-001&quot;
+      ]
+    }
+  ],
+  &quot;unsupportedSourceFiles&quot;: [
+    &quot;apps/ai-gateway/.dev.vars.example&quot;,
+    &quot;apps/ai-gateway/wrangler.jsonc&quot;,
+    &quot;apps/auditlogs/.dev.vars.example&quot;,
+    &quot;apps/auditlogs/wrangler.jsonc&quot;,
+    &quot;apps/autorag/.dev.vars.example&quot;,
+    &quot;apps/autorag/wrangler.jsonc&quot;,
+    &quot;apps/browser-rendering/.dev.vars.example&quot;,
+    &quot;apps/browser-rendering/wrangler.jsonc&quot;,
+    &quot;apps/cloudflare-blog/wrangler.jsonc&quot;,
+    &quot;apps/cloudflare-one-casb/.dev.vars.example&quot;,
+    &quot;apps/cloudflare-one-casb/wrangler.jsonc&quot;,
+    &quot;apps/demo-day/frontend/index.html&quot;,
+    &quot;apps/dex-analysis/.dev.vars.example&quot;,
+    &quot;apps/dex-analysis/wrangler.jsonc&quot;,
+    &quot;apps/dns-analytics/.dev.vars.example&quot;,
+    &quot;apps/dns-analytics/wrangler.jsonc&quot;,
+    &quot;apps/docs-ai-search/wrangler.jsonc&quot;,
+    &quot;apps/graphql/wrangler.jsonc&quot;,
+    &quot;apps/logpush/.dev.vars.example&quot;,
+    &quot;apps/logpush/wrangler.jsonc&quot;,
+    &quot;apps/radar/.dev.vars.example&quot;,
+    &quot;apps/radar/wrangler.jsonc&quot;,
+    &quot;apps/sandbox-container/.dev.vars.example&quot;,
+    &quot;apps/sandbox-container/wrangler.jsonc&quot;,
+    &quot;apps/stack-mcp/wrangler.jsonc&quot;,
+    &quot;apps/workers-bindings/.dev.vars.example&quot;,
+    &quot;apps/workers-bindings/wrangler.jsonc&quot;,
+    &quot;apps/workers-builds/.dev.vars.example&quot;,
+    &quot;apps/workers-builds/wrangler.jsonc&quot;,
+    &quot;apps/workers-observability/.dev.vars.example&quot;,
+    &quot;apps/workers-observability/wrangler.jsonc&quot;,
+    &quot;packages/tools/bin/run-changeset-new&quot;,
+    &quot;packages/tools/bin/run-eslint-workers&quot;,
+    &quot;packages/tools/bin/run-fix-deps&quot;,
+    &quot;packages/tools/bin/run-tsc&quot;,
+    &quot;packages/tools/bin/run-turbo&quot;,
+    &quot;packages/tools/bin/run-vitest&quot;,
+    &quot;packages/tools/bin/run-vitest-ci&quot;,
+    &quot;packages/tools/bin/run-wrangler-deploy&quot;,
+    &quot;packages/tools/bin/run-wrangler-types&quot;,
+    &quot;packages/tools/bin/runx&quot;,
+    &quot;packages/tools/src/test/fixtures/changesets/empty/.gitkeep&quot;
+  ],
+  &quot;excludedFiles&quot;: [
+    {
+      &quot;path&quot;: &quot;.git&quot;,
+      &quot;reason&quot;: &quot;ignored-directory&quot;
+    },
+    {
+      &quot;path&quot;: &quot;.changeset/README.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;.dockerignore&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;.editorconfig&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;.github/ISSUE_TEMPLATE/bug_report.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;.gitignore&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;.npmrc&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;.prettierignore&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;CONTRIBUTING.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;LICENSE&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;README.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/ai-gateway/.dev.vars.example&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/ai-gateway/CHANGELOG.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/ai-gateway/CONTRIBUTING.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/ai-gateway/README.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/ai-gateway/types.d.ts&quot;,
+      &quot;reason&quot;: &quot;type-declaration&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/ai-gateway/worker-configuration.d.ts&quot;,
+      &quot;reason&quot;: &quot;type-declaration&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/ai-gateway/wrangler.jsonc&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/auditlogs/.dev.vars.example&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/auditlogs/CHANGELOG.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/auditlogs/CONTRIBUTING.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/auditlogs/README.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/auditlogs/types.d.ts&quot;,
+      &quot;reason&quot;: &quot;type-declaration&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/auditlogs/worker-configuration.d.ts&quot;,
+      &quot;reason&quot;: &quot;type-declaration&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/auditlogs/wrangler.jsonc&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/autorag/.dev.vars.example&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/autorag/CHANGELOG.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/autorag/CONTRIBUTING.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/autorag/README.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/autorag/types.d.ts&quot;,
+      &quot;reason&quot;: &quot;type-declaration&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/autorag/worker-configuration.d.ts&quot;,
+      &quot;reason&quot;: &quot;type-declaration&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/autorag/wrangler.jsonc&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/browser-rendering/.dev.vars.example&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/browser-rendering/CHANGELOG.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/browser-rendering/CONTRIBUTING.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/browser-rendering/README.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/browser-rendering/types.d.ts&quot;,
+      &quot;reason&quot;: &quot;type-declaration&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/browser-rendering/worker-configuration.d.ts&quot;,
+      &quot;reason&quot;: &quot;type-declaration&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/browser-rendering/wrangler.jsonc&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/cloudflare-blog/CHANGELOG.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/cloudflare-blog/README.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/cloudflare-blog/worker-configuration.d.ts&quot;,
+      &quot;reason&quot;: &quot;type-declaration&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/cloudflare-blog/wrangler.jsonc&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/cloudflare-one-casb/.dev.vars.example&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/cloudflare-one-casb/CHANGELOG.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/cloudflare-one-casb/README.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/cloudflare-one-casb/types.d.ts&quot;,
+      &quot;reason&quot;: &quot;type-declaration&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/cloudflare-one-casb/worker-configuration.d.ts&quot;,
+      &quot;reason&quot;: &quot;type-declaration&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/cloudflare-one-casb/wrangler.jsonc&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/demo-day/CHANGELOG.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/demo-day/frontend/index.html&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/demo-day/frontend/public/anthropic.svg&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/demo-day/frontend/public/asana.svg&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/demo-day/frontend/public/atlassian.svg&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/demo-day/frontend/public/canva.svg&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/demo-day/frontend/public/cloudflare.svg&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/demo-day/frontend/public/cloudflare_logo.svg&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/demo-day/frontend/public/dina.jpg&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/demo-day/frontend/public/favicon-16x16.png&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/demo-day/frontend/public/favicon-32x32.png&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/demo-day/frontend/public/favicon.ico&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/demo-day/frontend/public/favicon.png&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/demo-day/frontend/public/intercom.svg&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/demo-day/frontend/public/linear.svg&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/demo-day/frontend/public/matt.jpg&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/demo-day/frontend/public/mcp_demo_day.svg&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/demo-day/frontend/public/mcpog.png&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/demo-day/frontend/public/more.svg&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/demo-day/frontend/public/paypal.svg&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/demo-day/frontend/public/pete.jpeg&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/demo-day/frontend/public/sentry.svg&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/demo-day/frontend/public/special_guest.png&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/demo-day/frontend/public/square.svg&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/demo-day/frontend/public/stripe.svg&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/demo-day/frontend/public/sunil.jpg&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/demo-day/frontend/public/webflow.svg&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/demo-day/frontend/styles.css&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/demo-day/types.d.ts&quot;,
+      &quot;reason&quot;: &quot;type-declaration&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/demo-day/worker-configuration.d.ts&quot;,
+      &quot;reason&quot;: &quot;type-declaration&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/dex-analysis/.dev.vars.example&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/dex-analysis/CHANGELOG.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/dex-analysis/README.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/dex-analysis/types.d.ts&quot;,
+      &quot;reason&quot;: &quot;type-declaration&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/dex-analysis/worker-configuration.d.ts&quot;,
+      &quot;reason&quot;: &quot;type-declaration&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/dex-analysis/wrangler.jsonc&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/dns-analytics/.dev.vars.example&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/dns-analytics/CHANGELOG.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/dns-analytics/CONTRIBUTING.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/dns-analytics/README.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/dns-analytics/types.d.ts&quot;,
+      &quot;reason&quot;: &quot;type-declaration&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/dns-analytics/worker-configuration.d.ts&quot;,
+      &quot;reason&quot;: &quot;type-declaration&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/dns-analytics/wrangler.jsonc&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/docs-ai-search/CHANGELOG.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/docs-ai-search/README.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/docs-ai-search/worker-configuration.d.ts&quot;,
+      &quot;reason&quot;: &quot;type-declaration&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/docs-ai-search/wrangler.jsonc&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/graphql/CHANGELOG.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/graphql/CONTRIBUTING.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/graphql/README.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/graphql/types.d.ts&quot;,
+      &quot;reason&quot;: &quot;type-declaration&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/graphql/worker-configuration.d.ts&quot;,
+      &quot;reason&quot;: &quot;type-declaration&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/graphql/wrangler.jsonc&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/logpush/.dev.vars.example&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/logpush/CHANGELOG.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/logpush/README.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/logpush/types.d.ts&quot;,
+      &quot;reason&quot;: &quot;type-declaration&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/logpush/worker-configuration.d.ts&quot;,
+      &quot;reason&quot;: &quot;type-declaration&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/logpush/wrangler.jsonc&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/radar/.dev.vars.example&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/radar/CHANGELOG.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/radar/CONTRIBUTING.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/radar/README.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/radar/types.d.ts&quot;,
+      &quot;reason&quot;: &quot;type-declaration&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/radar/worker-configuration.d.ts&quot;,
+      &quot;reason&quot;: &quot;type-declaration&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/radar/wrangler.jsonc&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/sandbox-container/.dev.vars.example&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/sandbox-container/CHANGELOG.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/sandbox-container/CONTRIBUTING.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/sandbox-container/README.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/sandbox-container/types.d.ts&quot;,
+      &quot;reason&quot;: &quot;type-declaration&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/sandbox-container/worker-configuration.d.ts&quot;,
+      &quot;reason&quot;: &quot;type-declaration&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/sandbox-container/wrangler.jsonc&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/stack-mcp/CHANGELOG.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/stack-mcp/README.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/stack-mcp/worker-configuration.d.ts&quot;,
+      &quot;reason&quot;: &quot;type-declaration&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/stack-mcp/wrangler.jsonc&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-bindings/.dev.vars.example&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-bindings/.gitignore&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-bindings/CHANGELOG.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-bindings/CONTRIBUTING.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-bindings/README.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-bindings/evals/types.d.ts&quot;,
+      &quot;reason&quot;: &quot;type-declaration&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-bindings/worker-configuration.d.ts&quot;,
+      &quot;reason&quot;: &quot;type-declaration&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-bindings/wrangler.jsonc&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-builds/.dev.vars.example&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-builds/CHANGELOG.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-builds/CONTRIBUTING.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-builds/README.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-builds/types.d.ts&quot;,
+      &quot;reason&quot;: &quot;type-declaration&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-builds/worker-configuration.d.ts&quot;,
+      &quot;reason&quot;: &quot;type-declaration&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-builds/wrangler.jsonc&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-observability/.dev.vars.example&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-observability/CHANGELOG.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-observability/CONTRIBUTING.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-observability/README.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-observability/types.d.ts&quot;,
+      &quot;reason&quot;: &quot;type-declaration&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-observability/worker-configuration.d.ts&quot;,
+      &quot;reason&quot;: &quot;type-declaration&quot;
+    },
+    {
+      &quot;path&quot;: &quot;apps/workers-observability/wrangler.jsonc&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;implementation-guides/evals.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;implementation-guides/tools.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;implementation-guides/type-validators.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;packages/eslint-config/CHANGELOG.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;packages/eslint-config/README.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;packages/eval-tools/CHANGELOG.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;packages/eval-tools/worker-configuration.d.ts&quot;,
+      &quot;reason&quot;: &quot;type-declaration&quot;
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/CHANGELOG.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/README.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/types.d.ts&quot;,
+      &quot;reason&quot;: &quot;type-declaration&quot;
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-common/worker-configuration.d.ts&quot;,
+      &quot;reason&quot;: &quot;type-declaration&quot;
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-observability/CHANGELOG.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;packages/mcp-observability/worker-configuration.d.ts&quot;,
+      &quot;reason&quot;: &quot;type-declaration&quot;
+    },
+    {
+      &quot;path&quot;: &quot;packages/tools/CHANGELOG.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;packages/tools/README.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    },
+    {
+      &quot;path&quot;: &quot;packages/tools/bin/run-changeset-new&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;packages/tools/bin/run-eslint-workers&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;packages/tools/bin/run-fix-deps&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;packages/tools/bin/run-tsc&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;packages/tools/bin/run-turbo&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;packages/tools/bin/run-vitest&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;packages/tools/bin/run-vitest-ci&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;packages/tools/bin/run-wrangler-deploy&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;packages/tools/bin/run-wrangler-types&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;packages/tools/bin/runx&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;packages/tools/src/test/fixtures/changesets/empty/.gitkeep&quot;,
+      &quot;reason&quot;: &quot;unsupported-implementation&quot;
+    },
+    {
+      &quot;path&quot;: &quot;packages/typescript-config/CHANGELOG.md&quot;,
+      &quot;reason&quot;: &quot;outside-rule-scope&quot;
+    }
+  ],
+  &quot;readErrors&quot;: [],
+  &quot;truncation&quot;: [],
+  &quot;limits&quot;: {
+    &quot;maxFiles&quot;: 4000,
+    &quot;maxDepth&quot;: 12,
+    &quot;maxFileBytes&quot;: 1048576
+  }
+}</pre></details>
+<h2>Fix first (19 critical/high)</h2>
+<table class="data"><thead><tr><th>Severity</th><th>Rule</th><th>Finding</th><th>Remediation</th></tr></thead><tbody><tr><td><strong style="color:var(--bad)">CRITICAL</strong></td><td><code>AT-SEC-003</code> (ASI02)</td><td>Unbounded Dynamic Shell Execution<br><code class="muted">apps/sandbox-container/server/container-tools.ts:68</code><br><span class="muted">Evidence: </span><code>content: [{ type: 'text', text: await getUserContainer(context).container_exec(args) }],</code></td><td>Strictly restrict shell execution to an immutable allowlist of binary commands with explicit argument arrays, or execute inside microVM sandboxes.</td></tr><tr><td><strong style="color:var(--bad)">CRITICAL</strong></td><td><code>AT-SEC-003</code> (ASI02)</td><td>Unbounded Dynamic Shell Execution<br><code class="muted">apps/sandbox-container/server/userContainer.ts:224</code><br><span class="muted">Evidence: </span><code>async container_exec(params: ExecParams): Promise&lt;string&gt; {</code></td><td>Strictly restrict shell execution to an immutable allowlist of binary commands with explicit argument arrays, or execute inside microVM sandboxes.</td></tr><tr><td><strong style="color:var(--bad)">CRITICAL</strong></td><td><code>AT-SEC-003</code> (ASI02)</td><td>Unbounded Dynamic Shell Execution<br><code class="muted">apps/sandbox-container/server/userContainer.ts:406</code><br><span class="muted">Evidence: </span><code>const proc = await container.exec(cmd, {</code></td><td>Strictly restrict shell execution to an immutable allowlist of binary commands with explicit argument arrays, or execute inside microVM sandboxes.</td></tr><tr><td><strong style="color:var(--orange)">HIGH</strong></td><td><code>AT-SEC-006</code> (LLM06)</td><td>Unfiltered SSRF / Arbitrary Network Egress<br><code class="muted">apps/browser-rendering/src/browser.tools.spec.ts:19</code><br><span class="muted">Evidence: </span><code>new Cloudflare({ apiToken, fetch: (url, init) =&gt; globalThis.fetch(url, init) }),</code></td><td>Define an explicit egress domain allowlist and block private IP ranges (127.0.0.1, 10.0.0.0/8, 169.254.169.254).</td></tr><tr><td><strong style="color:var(--orange)">HIGH</strong></td><td><code>AT-SEC-006</code> (LLM06)</td><td>Unfiltered SSRF / Arbitrary Network Egress<br><code class="muted">apps/cloudflare-blog/src/tools/blog.tools.ts:27</code><br><span class="muted">Evidence: </span><code>const res = await cloudflareFetch(url)</code></td><td>Define an explicit egress domain allowlist and block private IP ranges (127.0.0.1, 10.0.0.0/8, 169.254.169.254).</td></tr><tr><td><strong style="color:var(--orange)">HIGH</strong></td><td><code>AT-SEC-006</code> (LLM06)</td><td>Unfiltered SSRF / Arbitrary Network Egress<br><code class="muted">apps/demo-day/frontend/script.js:141</code><br><span class="muted">Evidence: </span><code>async function retryFetch(url, options, maxRetries = 3) {</code></td><td>Define an explicit egress domain allowlist and block private IP ranges (127.0.0.1, 10.0.0.0/8, 169.254.169.254).</td></tr><tr><td><strong style="color:var(--orange)">HIGH</strong></td><td><code>AT-SEC-006</code> (LLM06)</td><td>Unfiltered SSRF / Arbitrary Network Egress<br><code class="muted">apps/demo-day/frontend/script.js:144</code><br><span class="muted">Evidence: </span><code>const response = await fetch(url, options)</code></td><td>Define an explicit egress domain allowlist and block private IP ranges (127.0.0.1, 10.0.0.0/8, 169.254.169.254).</td></tr><tr><td><strong style="color:var(--orange)">HIGH</strong></td><td><code>AT-SEC-006</code> (LLM06)</td><td>Unfiltered SSRF / Arbitrary Network Egress<br><code class="muted">apps/dex-analysis/src/warp_diag_reader.ts:81</code><br><span class="muted">Evidence: </span><code>const res = await cloudflareFetch(url, { headers })</code></td><td>Define an explicit egress domain allowlist and block private IP ranges (127.0.0.1, 10.0.0.0/8, 169.254.169.254).</td></tr><tr><td><strong style="color:var(--orange)">HIGH</strong></td><td><code>AT-SEC-006</code> (LLM06)</td><td>Unfiltered SSRF / Arbitrary Network Egress<br><code class="muted">apps/radar/src/tools/radar.tools.ts:164</code><br><span class="muted">Evidence: </span><code>const response = await cloudflareFetch(url.toString(), {</code></td><td>Define an explicit egress domain allowlist and block private IP ranges (127.0.0.1, 10.0.0.0/8, 169.254.169.254).</td></tr><tr><td><strong style="color:var(--orange)">HIGH</strong></td><td><code>AT-SEC-006</code> (LLM06)</td><td>Unfiltered SSRF / Arbitrary Network Egress<br><code class="muted">apps/radar/src/tools/url-scanner.tools.ts:40</code><br><span class="muted">Evidence: </span><code>const res = await cloudflareFetch(url.toString(), {</code></td><td>Define an explicit egress domain allowlist and block private IP ranges (127.0.0.1, 10.0.0.0/8, 169.254.169.254).</td></tr><tr><td><strong style="color:var(--orange)">HIGH</strong></td><td><code>AT-SEC-006</code> (LLM06)</td><td>Unfiltered SSRF / Arbitrary Network Egress<br><code class="muted">packages/mcp-common/src/cloudflare-api.ts:53</code><br><span class="muted">Evidence: </span><code>const response = await cloudflareFetch(url, {</code></td><td>Define an explicit egress domain allowlist and block private IP ranges (127.0.0.1, 10.0.0.0/8, 169.254.169.254).</td></tr><tr><td><strong style="color:var(--orange)">HIGH</strong></td><td><code>AT-SEC-006</code> (LLM06)</td><td>Unfiltered SSRF / Arbitrary Network Egress<br><code class="muted">packages/mcp-common/src/cloudflare-oauth-flow.spec.ts:53</code><br><span class="muted">Evidence: </span><code>async fetch(url: string, init: RequestInit = {}): Promise&lt;Response&gt; {</code></td><td>Define an explicit egress domain allowlist and block private IP ranges (127.0.0.1, 10.0.0.0/8, 169.254.169.254).</td></tr><tr><td><strong style="color:var(--orange)">HIGH</strong></td><td><code>AT-SEC-006</code> (LLM06)</td><td>Unfiltered SSRF / Arbitrary Network Egress<br><code class="muted">packages/mcp-common/src/cloudflare-oauth-flow.spec.ts:192</code><br><span class="muted">Evidence: </span><code>const page = await browser.fetch(url)</code></td><td>Define an explicit egress domain allowlist and block private IP ranges (127.0.0.1, 10.0.0.0/8, 169.254.169.254).</td></tr><tr><td><strong style="color:var(--orange)">HIGH</strong></td><td><code>AT-SEC-006</code> (LLM06)</td><td>Unfiltered SSRF / Arbitrary Network Egress<br><code class="muted">packages/mcp-common/src/cloudflare-oauth-flow.spec.ts:195</code><br><span class="muted">Evidence: </span><code>const again = await browser.fetch(url)</code></td><td>Define an explicit egress domain allowlist and block private IP ranges (127.0.0.1, 10.0.0.0/8, 169.254.169.254).</td></tr><tr><td><strong style="color:var(--orange)">HIGH</strong></td><td><code>AT-SEC-006</code> (LLM06)</td><td>Unfiltered SSRF / Arbitrary Network Egress<br><code class="muted">packages/mcp-common/src/cloudflare-oauth-flow.spec.ts:200</code><br><span class="muted">Evidence: </span><code>const elsewhere = await new Browser().fetch(url)</code></td><td>Define an explicit egress domain allowlist and block private IP ranges (127.0.0.1, 10.0.0.0/8, 169.254.169.254).</td></tr><tr><td><strong style="color:var(--orange)">HIGH</strong></td><td><code>AT-SEC-006</code> (LLM06)</td><td>Unfiltered SSRF / Arbitrary Network Egress<br><code class="muted">packages/mcp-common/src/user-agent.spec.ts:31</code><br><span class="muted">Evidence: </span><code>await cloudflareFetch(URL, { headers: { Authorization: 'Bearer token' } })</code></td><td>Define an explicit egress domain allowlist and block private IP ranges (127.0.0.1, 10.0.0.0/8, 169.254.169.254).</td></tr><tr><td><strong style="color:var(--orange)">HIGH</strong></td><td><code>AT-SEC-006</code> (LLM06)</td><td>Unfiltered SSRF / Arbitrary Network Egress<br><code class="muted">packages/mcp-common/src/user-agent.spec.ts:40</code><br><span class="muted">Evidence: </span><code>await cloudflareFetch(URL, { headers: new Headers({ 'User-Agent': 'something-else' }) })</code></td><td>Define an explicit egress domain allowlist and block private IP ranges (127.0.0.1, 10.0.0.0/8, 169.254.169.254).</td></tr><tr><td><strong style="color:var(--orange)">HIGH</strong></td><td><code>AT-SEC-006</code> (LLM06)</td><td>Unfiltered SSRF / Arbitrary Network Egress<br><code class="muted">packages/mcp-common/src/user-agent.spec.ts:60</code><br><span class="muted">Evidence: </span><code>await cloudflareFetch(URL)</code></td><td>Define an explicit egress domain allowlist and block private IP ranges (127.0.0.1, 10.0.0.0/8, 169.254.169.254).</td></tr><tr><td><strong style="color:var(--orange)">HIGH</strong></td><td><code>AT-SEC-006</code> (LLM06)</td><td>Unfiltered SSRF / Arbitrary Network Egress<br><code class="muted">packages/mcp-common/src/user-agent.ts:38</code><br><span class="muted">Evidence: </span><code>return fetch(input, { ...init, headers })</code></td><td>Define an explicit egress domain allowlist and block private IP ranges (127.0.0.1, 10.0.0.0/8, 169.254.169.254).</td></tr></tbody></table>
+<h2>Permissions</h2>
+<p>Scope: <strong>excessive</strong> · Shell: enabled · Network egress: yes · File deletion: none · Human approval: none</p>
+<h2>Provenance</h2>
+<p>License: Apache-2.0 · Lockfile: yes · Security policy: no · Signals: unverified origin</p>
+<div class="callout"><p><strong>Independently scanned by the OpenTrustBench registry</strong> (not self-reported by the project). Static analysis only — no code executed, findings need human triage, counts may include test/example code. <strong>Static snapshot; re-scan before relying on it:</strong> <code>npx @opentrustbench/cli scan https://github.com/cloudflare/mcp-server-cloudflare</code>. Scores move with every upstream commit; pages refresh weekly. <a href="../methodology.html">How scoring works</a>.</p></div>
+</div></main>
+<footer><div class="wrap"><div class="foot-base" style="border-top:none;padding-top:0"><span>© 2026 OpenTrustBench · Apache-2.0 · Built by <a href="https://eulogik.com">Eulogik</a></span><span><a href="../">Home</a> · <a href="./">Registry</a></span></div></div></footer>
+<script src="../assets/site.js" defer></script>
+</body></html>

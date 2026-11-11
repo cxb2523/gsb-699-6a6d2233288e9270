@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /badge/
+Sitemap: https://opentrustbench.com/sitemap.xml
