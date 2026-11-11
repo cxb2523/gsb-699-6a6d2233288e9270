@@ -2,6 +2,7 @@ export * from "./types/index.js";
 export * from "./analysis/detector.js";
 export * from "./analysis/static-analyzer.js";
 export * from "./analysis/permission-extractor.js";
+export * from "./analysis/coverage-audit.js";
 export * from "./analysis/target-resolver.js";
 export * from "./analysis/dependency-scanner.js";
 export * from "./trust/provenance.js";
